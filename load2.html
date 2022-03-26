@@ -1,15 +1,22 @@
-<meta content='width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1' name='viewport' />
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<!DOCTYPE html>
+<html>
+<head>
+<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0' name='viewport'/>
+<title>1 ANIMAL</title>
+<script>
+function delayloading() {
+var ld = document.getElementsByTagName("loading");
+setTimeout(function() {ld[0].innerHTML = "NETWORK SLOW";}, 7000);
+setTimeout(function() {ld[0].innerHTML = "RETRYING";}, 8000);
+setTimeout(function() {ld[0].innerHTML = "LOADING";if($('#popup2').is(':visible')){location.reload();}}, 10000); }
+delayloading(); 
+</script>
+<script src='https://cdn.jsdelivr.net/gh/gkcube/js@1/jquery.min.js'></script>
+<script src="https://cdn.jsdelivr.net/gh/gkcube/js@1/m1.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/gkcube/js@1/s1.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/gkcube/css@e635e11/m.css">
 
-  <style>
-body {color:red;}
-</style>
-<button onclick='ref()'>REFRESH</button>
-<button onclick="location.href='load1.html?c=test2'">dog</button>
-<div id='w1'></div>
-
-
-
+  <div id='w1'></div>
 <script>
 
 var str = window.location.href,
@@ -17,7 +24,7 @@ ur = new URL(str),
 ccc = ur.searchParams.get("c"),
 url = 'https://api.github.com/repos/gkcube/mysite/git/refs/heads/main', w1="w1", tag;
 fetch(url).then(r => r.json()).then((o) => {tag=o.object.sha;
-$('body').load("https://cdn.jsdelivr.net/gh/gkcube/mysite@"+tag+"/"+ccc+".html");
+$('#w1').load("https://cdn.jsdelivr.net/gh/gkcube/mysite@"+tag+"/"+ccc+".html");
 })
 
   
