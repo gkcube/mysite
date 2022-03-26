@@ -17,39 +17,10 @@ ur = new URL(str),
 ccc = ur.searchParams.get("c"),
 url = 'https://api.github.com/repos/gkcube/mysite/git/refs/heads/main', w1="w1", tag;
 fetch(url).then(r => r.json()).then((o) => {tag=o.object.sha;
-$('body').load('https://cdn.jsdelivr.net/gh/gkcube/mysite@"+tag+"/"+ccc+".html');
-ih1();})
+$('body').load("https://cdn.jsdelivr.net/gh/gkcube/mysite@"+tag+"/"+ccc+".html");
+})
 
-   
-  function ref() {var str = window.location.href,
-ur = new URL(str),
-ccc = ur.searchParams.get("c"),
-url = 'https://api.github.com/repos/gkcube/mysite/git/refs/heads/main', w1="w1", tag;
-fetch(url).then(r => r.json()).then((o) => {tag=o.object.sha;
-$('body').load('https://cdn.jsdelivr.net/gh/gkcube/mysite@"+tag+"/"+ccc+".html');
-ih1();})
-}
   
-  
-function ih1() {
-  
-
-  var z,i,e,f,x;
-z=document.getElementsByTagName("*");
-for(i= 0;i<z.length;i++) {e=z[i];
-f=e.getAttribute(w1);
-if(f){x=new XMLHttpRequest();
-x.onreadystatechange=function(){
-if(this.readyState==4) {
-if(this.status==200){e.innerHTML=this.responseText;}
-if(this.status==404){e.innerHTML="Page not found.";}
-e.removeAttribute(w1);ih1();}}
-x.open("GET", f, true);x.send();return;}}
-               
-            
-               
-               }
-
 
 
 </script>
