@@ -52,11 +52,9 @@ onhashchange = function (){ if(location.hash){ } else{ $("#resetpopup,#belowpopu
  
  
  
-var api = 'https://api.github.com/repos/gkcube/html/git/refs/heads/main',ttt;
+var api = 'https://api.github.com/repos/gkcube/html/git/refs/heads/main';
+ var ttt;
  fetch(api).then(r => r.json()).then((o) => { ttt=o.object.sha;  })
- 
- 
- 
 
 $("#wbcs-history-list").load("https://cdn.jsdelivr.net/gh/gkcube/html@"+ttt+"/wbcs-history-list.html"); 
 setTimeout(function(){ $('go:eq('+q+')').addClass('act'); }, 800);
