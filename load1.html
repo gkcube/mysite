@@ -31,12 +31,15 @@
 
 
 function ld(){
-
+$.getScript("https://cdn.jsdelivr.net/gh/gkcube/js@1/m1.js");
+$.getScript("https://cdn.jsdelivr.net/gh/gkcube/js@1/s1.js");
 var str = window.location.href,
 ur = new URL(str),
 ccc = ur.searchParams.get("c"),
 url = 'https://api.github.com/repos/gkcube/mysite/git/refs/heads/main', w1="w1", tag;
 fetch(url).then(r => r.json()).then((o) => {tag=o.object.sha;
+
+
 $('#moc').load("https://cdn.jsdelivr.net/gh/gkcube/mysite@"+tag+"/"+ccc+".html");
 
 
@@ -45,24 +48,13 @@ $('#moc').load("https://cdn.jsdelivr.net/gh/gkcube/mysite@"+tag+"/"+ccc+".html")
 
 }
 
-$.getScript('https://cdn.jsdelivr.net/gh/gkcube/js@1/s1.js', function() {
-$.getScript("https://cdn.jsdelivr.net/gh/gkcube/js@1/m1.js");            
 
-
-        });
 
 
 $.when(
-    $.getScript( "https://cdn.jsdelivr.net/gh/gkcube/js@1/m1.js" ),
-    $.getScript( "https://cdn.jsdelivr.net/gh/gkcube/js@1/s1.js" ),
-    $.Deferred(function( deferred ){
-        $( deferred.resolve );
-    })
-).done(function(){
-    
-   ld();
-    
-});
+$.getScript( "https://cdn.jsdelivr.net/gh/gkcube/js@1/m1.js" ),
+$.getScript( "https://cdn.jsdelivr.net/gh/gkcube/js@1/s1.js" ),
+).done(function(){ld();});
 </script>
 
  
