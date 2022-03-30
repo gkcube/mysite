@@ -1,36 +1,283 @@
-<!DOCTYPE html>
-<html>
-<head>
-<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0' name='viewport'/>
-<title>1 ANIMAL</title>
+<meta content='width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1' name='viewport' />
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script>
 function delayloading() {
 var ld = document.getElementsByTagName("loading");
-setTimeout(function() {ld[0].innerHTML = "NETWORK SLOW";}, 7000);
+setTimeout(function() {ld[0].innerHTML = "PLEASE WAIT";}, 7000);
 setTimeout(function() {ld[0].innerHTML = "RETRYING";}, 8000);
 setTimeout(function() {ld[0].innerHTML = "LOADING";if($('#popup2').is(':visible')){location.reload();}}, 10000); }
 delayloading(); 
 </script>
-<script src='https://cdn.jsdelivr.net/gh/gkcube/js@1/jquery.min.js'></script>
-<script src="https://cdn.jsdelivr.net/gh/gkcube/js@1/m1.js"></script>
-<script src="https://cdn.jsdelivr.net/gh/gkcube/js@1/s1.js"></script>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/gkcube/css@e635e11/m.css">
 
-  <div id='w1'></div>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/rpgexam/css@3/mock.css" />
 <script>
+function bodylock() {$('body').css('overflow','hidden');}
+  
+function bodyunlock() {$('body').css('overflow','visible');}
+</script>
+<style>.result {display:none;}#HTML15{display:block}
+#sticky { position: fixed; margin-bottom:300px; top: 0px; left: 0px; z-index: 10; width:100%;color:black}
+
+.menubar {background-color:white; color: black; text-align:left; width:100%;height:54px;box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.5);padding-top:2px;}
+.menubar img {float:left;margin:6px 0px 0px 6px;}
+
+.menubar abc {background-color:transparent; font-size:17px; color:white; border:0px solid #C8C8C8; margin-top:10px; font-weight: normal;display:inline-block;padding:3px 7px 1px 7px;border-top-left-radius:20px;border-bottom-right-radius:20px;}
+
+
+toolimg {float:left;}
+.tooltitle {height:51.5px; line-height:1.1;}
+tool1{font-size:15px;background-color:#c85f5a; border-radius:5px;padding: 2px 6px 2px 5px; float:left;border-bottom-left-radius:0px;border-top-left-radius:5px;}
+
+tool2 {font-size:15px;background-color:#2E4053;border-radius:5px;padding: 2px 6px 2px 5px; float:left; border-top-left-radius:0px;border-bottom-left-radius:5px;}
+
+tool1h {font-family:Zen Dots; font-size:22px;}
+  
+tool2h {font-size:14px;line-height:1;background-color:#1E569D;border-radius:50px;padding: 0px 4px 0px 4px;}
+
+.closebtn {background-color:transparent;border:none; border-radius:500px; width:40px;height:45px; float:left; margin:3px 0px 0px 8px;text-align:center;color:#000;transition-duration: 0.2s;}
+.closebtn:active {color:grey;}
+.closebtnr {width:40px;height:45px;float:right; margin:3px 0px 0px 0px; color:#000;transition-duration: 0.2s;}
+.mbar {margin-right:8px}
+
+.closebtnr:active {color:black;}
+
+   .close {background-color:#423a78;height:50px; border:none;position:fixed;z-index:5;bottom:120px;width:150px; right:5%; border-radius:5px}
+  .close .m-i {font-size:25px;margin:-2px 2px 0px 0px;}
+ 
+#belowpopup {display:none; position:fixed; width:100%;top:0;left:0; height:100vh; background-color:rgba(0, 0, 0, 0.5);z-index:5;}
+#whitepopup {display:none; position:fixed; width:100%;top:0;left:0; height:100vh; background-color:rgba(255, 255, 255, 1);z-index:5;}
+
+.tog{display:none}
+
+.menupop {height:350px; overflow-y: scroll; overflow-x: hidden; background-color:#403954; padding:0px 10px 0px 10px;border-radius:5px;border:0px solid #403954;border-top-width:10px;border-bottom-width:10px;}
+  
+menubox {position:fixed;top:70px;left:5%;z-index:5;width:90%; margin: 0px auto 0px auto;}
+  @media only screen and (min-width: 768px) {submitbox { left:15%;width:70%}}
+  @media only screen and (min-width: 1000px) {submitbox { left:25%;width:50%}}
+
+
+.dbox {background-color:white;width:90%;border-radius:5px;color:black;text-align:center;padding:0;font-family:quicksand;}
+.dbox hr { border:0;border-top: 2px solid #595E99;}
+.sharepopup{display:none; height:320px;}
+sharebox {position:fixed;bottom:120px;left:5%;z-index:6;width:100%}
+  @media only screen and (min-width: 768px) {.sharepopup {width: 50%;}sharebox { left:25%;}}
+
+.sharebutton {height:80px;color:black;width:100%;box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.5);border-radius:5px; float:left;}
+.sharetable table {width:100%;}
+.sharetable td {line-height:0.7em;padding:2px;text-align:center;width:33.33%;}
+.sharetable td img { width:40px;}
+
+</style>
+
+<div id="popup2" class="popup2">
+<div class="loadshadow"><div class="loader"></div><br />
+<loading>LOADING</loading></div></div>
+
+<div id="sticky">
+<div class="subhead">
+<button id="closebtn" class="lockb" onclick="toolicon()"><i class="m-i" style="font-size:25px;"><toolicon>&#xe5c4</toolicon></i></button>
+<toolimg></toolimg>
+<button class="tooltitle">
+<tool1>Guess The Picture</tool1><br /><tool2>Animals</tool2>
+</button>
+<button id="closebtnr" class="loading" onclick="location.reload()"><i class="m-i" style="font-size:28px;">&#xe5d5</i></button>
+<button class="lockb" id="closebtnr" onclick="location.replace('shareme://')"><i class="m-i" style="font-size:25px;">&#xe80d</i></button>
+</div></div>
+<div id='moc'></div>
+
+<script>
+var url = 'https://api.github.com/repos/gkcube/mysite/git/refs/heads/main', tag;
+function repo(){
+fetch(url).then(r => r.json()).then((o) => {tag=o.object.sha;})}
+repo();
+
+function jsload() {
+$.getScript("https://cdn.jsdelivr.net/gh/gkcube/js@1/m1.js");
+$.getScript("https://cdn.jsdelivr.net/gh/gkcube/js@1/s1.js");
+}
+
+function ld(){
 
 var str = window.location.href,
 ur = new URL(str),
-ccc = ur.searchParams.get("c"),
-url = 'https://api.github.com/repos/gkcube/mysite/git/refs/heads/main', w1="w1", tag;
-fetch(url).then(r => r.json()).then((o) => {tag=o.object.sha;
-$('#w1').load("https://cdn.jsdelivr.net/gh/gkcube/mysite@"+tag+"/"+ccc+".html");
-})
+ccc = ur.searchParams.get("c");
 
-  
+$("#moc").load("https://cdn.jsdelivr.net/gh/gkcube/mysite@"+tag+"/"+ccc+".html", 
+    function (responseText, textStatus, req) {
+ if (textStatus == "error") {repo(); ld()} 
+});
+}
 
 
+$.when(
+$.getScript( "https://cdn.jsdelivr.net/gh/gkcube/js@1/m1.js" ),
+$.getScript( "https://cdn.jsdelivr.net/gh/gkcube/js@1/s1.js" ),
+).done(function(){jsload();ld();});
 </script>
+
+ 
+<script src="https://cdn.jsdelivr.net/npm/swiper@6.7.1/swiper-bundle.min.js"></script>
+
+
+<script>
+<!-- Animal Quiz Language Change With Local Storage -->
+  
+function mylanguage() {  
+  if($('language1').html() == 'eng') {
+
+$('Animals').html('<tool1><ben>ছবি দেখে উত্তর দাও</tool1><br/><tool2><ben>পশু</tool2>'); 
+$('Alpaca').html('<ben>আলপাকা');
+$('Anteater').html('<ben>পিপীলিকাভুক');
+$('Baboon').html('<ben>বেবুন');
+$('Badger').html('<ben>ব্যাজার');
+$('Bat').html('<ben>বাদুড়');
+$('Barasingha').html('<ben>বারশিঙ্গা');
+$('Bear').html('<ben>ভালুক');
+$('beaver').html('<ben>বীবর');
+$('Bison').html('<ben>বুনো মোষ');
+$('Buffalo').html('<ben>মহিষ');
+$('Cat').html('<ben>বিড়াল');
+$('Chameleon').html('<ben>গিরগিটি');
+$('Cheetah').html('<ben>চিতা');
+$('Chimpanzee').html('<ben>শিম্পাঞ্জি');
+$('Cow').html('<ben>গোরু');
+$('Crocodile').html('<ben>কুমির');
+$('Deer').html('<ben>হরিণ');
+$('Dog').html('<ben>কুকুর');
+$('Dolphin').html('<ben>শুশুক');
+$('Donkey').html('<ben>গাধা');
+$('Elephant').html('<ben>হাতি');
+$('Fox').html('<ben>খেঁকশিয়াল');
+$('Gecko').html('<ben>গেকো');
+$('Giraffe').html('<ben>জিরাফ');
+$('Goat').html('<ben>ছাগল');
+$('Hippopotamus').html('<ben>জলহস্তী');
+$('Horse').html('<ben>ঘোড়া');
+$('Hyena').html('<ben>হায়না');
+$('Iguana').html('<ben>গোসাপ');
+$('Jackal').html('<ben>শিয়াল');
+$('Kangaroo').html('<ben>ক্যাঙ্গারু');
+$('Langur').html('<ben>লেঙ্গুর');
+$('Lemur').html('<ben>লেমুর');
+$('Lion').html('<ben>সিংহ');
+$('Lizard').html('<ben>টিকটিকি');
+$('Lynx').html('<ben>বনবিড়াল');
+$('Mole').html('<ben>ছুঁচো');
+$('Mongoose').html('<ben>নেউল');
+$('Monkey').html('<ben>বানর');
+$('Otter').html('<ben>ভোঁদড়');
+$('Panda').html('<ben>পান্ডা');
+$('Pangolin').html('<ben>বনরুই');
+$('Pig').html('<ben>শূকর');
+$('Polecat').html('<ben>খট্টাশ');
+$('Porcupine').html('<ben>শজারু');
+$('Rabbit').html('<ben>খরগোশ');
+$('Raccoon').html('<ben>র‍্যাকুন');
+$('Rat').html('<ben>ইঁদুর');
+$('Rhinoceros').html('<ben>গণ্ডার');
+$('Shark').html('<ben>হাঙ্গর');
+$('Sheep').html('<ben>ভেড়া');
+$('Snail').html('<ben>শামুক');
+$('Snake').html('<ben>সাপ');
+$('Squirrel').html('<ben>কাঠবিড়ালি');
+$('Tiger').html('<ben>বাঘ');
+$('Tortoise').html('<ben>কচ্ছপ');
+$('Whale').html('<ben>তিমি');
+$('Wolf').html('<ben>নেকড়ে');
+$('Zebra').html('<ben>জেব্রা');
+$('Score').html('<ben>স্কোর');
+$('Reset').html('<ben>রিসেট');
+$('Share').html('<ben>শেয়ার');
+ 
+    
+
+$('Score').html('<ben>স্কোর');
+$('Reset').html('<ben>রিসেট');
+$('Share').html('<ben>শেয়ার');
+$('cl').html('<button id="lc2">ENGLISH</button><button id="lc1"><ben>বাংলা</button>');
+$('touchoption').html('<ben>সঠিক অপশনটি টাচ করুন !');
+$('CorrectAnswer').html('<ben>সঠিক উত্তর !');
+$('language1').html('bng');sessionStorage.setItem('cl','t');
+
+} else {
+
+$('Animals').html('<tool1>Guess The Picture</tool1><br/><tool2>Animals</tool2>'); 
+$('Alpaca').html('Alpaca');
+$('Anteater').html('Anteater');
+$('Baboon').html('Baboon');
+$('Badger').html('Badger');
+$('Bat').html('Bat');
+$('Barasingha').html('Barasingha');
+$('Bear').html('Bear');
+$('Beaver').html('Beaver');
+$('Bison').html('Bison');
+$('Buffalo').html('Buffalo');
+$('Cat').html('Cat');
+$('Chameleon').html('Chameleon');
+$('Cheetah').html('Cheetah');
+$('Chimpanzee').html('Chimpanzee');
+$('Cow').html('Cow');
+$('Crocodile').html('Crocodile');
+$('Deer').html('Deer');
+$('Dog').html('Dog');
+$('Dolphin').html('Dolphin');
+$('Donkey').html('Donkey');
+$('Elephant').html('Elephant');
+$('Fox').html('Fox');
+$('Gecko').html('Gecko');
+$('Giraffe').html('Giraffe');
+$('Goat').html('Goat');
+$('Hippopotamus').html('Hippopotamus');
+$('Horse').html('Horse');
+$('Hyena').html('Hyena');
+$('Iguana').html('Iguana');
+$('Jackal').html('Jackal');
+$('Kangaroo').html('Kangaroo');
+$('Langur').html('Langur');
+$('Lemur').html('Lemur');
+$('Lion').html('Lion');
+$('Lizard').html('Lizard');
+$('Lynx').html('Lynx');
+$('Mole').html('Mole');
+$('Mongoose').html('Mongoose');
+$('Monkey').html('Monkey');
+$('Otter').html('Otter');
+$('Panda').html('Panda');
+$('Pangolin').html('Pangolin');
+$('Pig').html('Pig');
+$('Polecat').html('Polecat');
+$('Porcupine').html('Porcupine');
+$('Rabbit').html('Rabbit');
+$('Raccoon').html('Raccoon');
+$('Rat').html('Rat');
+$('Rhinoceros').html('Rhinoceros');
+$('Shark').html('Shark');
+$('Sheep').html('Sheep');
+$('Snail').html('Snail');
+$('Snake').html('Snake');
+$('Squirrel').html('Squirrel');
+$('Tiger').html('Tiger');
+$('Tortoise').html('Tortoise');
+$('Whale').html('Whale');
+$('Wolf').html('Wolf');
+$('Zebra').html('Zebra');
+$('Score').html('Score');
+$('Reset').html('Reset');
+$('Share').html('Share');
+
+
+$('Score').html('Score');
+$('Reset').html('Reset');
+$('Share').html('Share');
+$('cl').html('<button id="lc1">ENGLISH</button><button id="lc2"><ben>বাংলা</button>');
+$('touchoption').html('Touch The Correct Option !');
+$('CorrectAnswer').html('Correct Answer !');
+$('language1').html('eng');sessionStorage.removeItem('cl');
+}}
+  
+</script>
+
 
 
 
