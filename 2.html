@@ -60,13 +60,29 @@ function (responseText, textStatus, req) {
 if (textStatus=="error") {api1();wbcs-history-list();}
 });
 
- 
- 
- 
- 
- 
+
 }
- wbcs-history-list();
+ 
+ 
+ var url2 = 'https://api.github.com/repos/gkcube/mysite/git/refs/heads/main', tag2;
+function repo2(){
+fetch(url2).then(r => r.json()).then((o) => {tag2=o.object.sha;})}
+repo2();
+
+
+
+function ld2(){
+
+
+
+$("#wbcs-history-list").load("https://cdn.jsdelivr.net/gh/gkcube/html@"+tag2+"/wbcs-history-list.html", 
+    function (responseText, textStatus, req) {
+ if (textStatus == "error") {repo2(); ld2()} 
+});
+}
+ 
+ 
+ ld2();
  
  
  
