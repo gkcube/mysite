@@ -46,8 +46,7 @@ ccc = ur.searchParams.get("c");
 
 $("#moc").load("https://cdn.jsdelivr.net/gh/gkcube/mysite@"+tag+"/"+ccc+".html", 
     function (responseText, textStatus, req) {
-setTimeout(function(){ if (textStatus == "error") {
-$('.loadshadow').html("Page Error<hr/><a href=''>RELOAD</a>");} }, 5000);
+setTimeout(function(){ if (textStatus == "error") { location.reload()} }, 5000);
 
 });
 
