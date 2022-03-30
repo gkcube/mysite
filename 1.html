@@ -1021,6 +1021,33 @@ onhashchange = function (){ if(location.hash){ } else{ $("#resetpopup,#belowpopu
 </div></div></div>
 
 </div></div>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@6.7.1/swiper-bundle.min.js"></script>
+
+<script>
+var swiper = new Swiper('.swiper-container',{loop: true, loopPreventsSlide: false,
+preloadImages: true, lazy: true,
+navigation: {nextEl: '.next-right',prevEl: '.next-left',},       });
+
+swiper.on('transitionEnd', function() {$(".next-right").removeClass("mynext");
+
+localStorage.setItem('ns1', swiper.activeIndex);  });
+var ns1 = localStorage.getItem('ns1');
+
+function gotoslide() {if (localStorage.getItem("ns1") === null) {
+swiper.slideTo(1,0,true); }else {swiper.slideTo(ns1,0,true);}  }
+    
+    gotoslide();
+   
+
+</script>
+
+
+
+
+
 <quizbtn>
 <div class="scorebg">
 <button id="score1"><score>Score</score> : </button><button id="sbox">0</button>
