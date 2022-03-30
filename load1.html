@@ -26,25 +26,34 @@
 <div id='moc'></div>
 
 <script>
+var url = 'https://api.github.com/repos/gkcube/mysite/git/refs/heads/main', tag;
+fetch(url).then(r => r.json()).then((o) => {tag=o.object.sha;})
 
- 
+function jsload() {
 
+
+ $.getScript("https://cdn.jsdelivr.net/gh/gkcube/js@1/m1.js");
+$.getScript("https://cdn.jsdelivr.net/gh/gkcube/js@1/s1.js");
+}
 
 function ld(){
-$.getScript("https://cdn.jsdelivr.net/gh/gkcube/js@1/m1.js");
-$.getScript("https://cdn.jsdelivr.net/gh/gkcube/js@1/s1.js");
+
 var str = window.location.href,
 ur = new URL(str),
-ccc = ur.searchParams.get("c"),
-url = 'https://api.github.com/repos/gkcube/mysite/git/refs/heads/main', w1="w1", tag;
-fetch(url).then(r => r.json()).then((o) => {tag=o.object.sha;
-
-
-$('#moc').load("https://cdn.jsdelivr.net/gh/gkcube/mysite@"+tag+"/"+ccc+".html");
+ccc = ur.searchParams.get("c");
 
 
 
-})
+$("#moc").load("https://cdn.jsdelivr.net/gh/gkcube/mysite@"+tag+"/"+ccc+".html", 
+    function (responseText, textStatus, req) {
+setTimeout(function(){ if (textStatus == "error") {
+$('.loadshadow').html("Page Error<hr/><a href=''>RELOAD</a>");} }, 5000);
+
+});
+
+
+
+
 
 }
 
@@ -54,7 +63,7 @@ $('#moc').load("https://cdn.jsdelivr.net/gh/gkcube/mysite@"+tag+"/"+ccc+".html")
 $.when(
 $.getScript( "https://cdn.jsdelivr.net/gh/gkcube/js@1/m1.js" ),
 $.getScript( "https://cdn.jsdelivr.net/gh/gkcube/js@1/s1.js" ),
-).done(function(){ld();});
+).done(function(){jsload();ld();});
 </script>
 
  
