@@ -11,15 +11,10 @@ delayloading();
 </script>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/gkcube/css@e635e11/m.css">
 
-
 <div id="popup2" class="popup2">
-<div class="loadshadow">
-<div class="loader">
-</div>
-<br />
-<loading>LOADING</loading>
-</div>
-</div>
+<div class="loadshadow"><div class="loader"></div><br />
+<loading>LOADING</loading></div></div>
+
 <div id="sticky">
 <div class="subhead">
 <button id="closebtn" class="lockb" onclick="toolicon()"><i class="m-i" style="font-size:25px;"><toolicon>&#xe5c4</toolicon></i></button>
@@ -51,8 +46,8 @@ ccc = ur.searchParams.get("c");
 
 $("#moc").load("https://cdn.jsdelivr.net/gh/gkcube/mysite@"+tag+"/"+ccc+".html", 
     function (responseText, textStatus, req) {
-setTimeout(function(){ if (textStatus == "error") {repo(); ld()} }, 2000);});
-
+ if (textStatus == "error") {repo(); ld()} 
+});
 }
 
 
