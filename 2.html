@@ -12,6 +12,19 @@ $("#wbcs-history-list").load("https://cdn.jsdelivr.net/gh/gkcube/html@"+o.object
  
  
  
- window.onload = function() {showpage();};
  
+ 
+</script>
+<script>
+ $(document).ready(function() {
+ 
+   if(location.hash){window.history.back();}
+   $('.tooltitle').delay(500).slideDown('slow');
+   
+setTimeout(function() {if(sessionStorage.getItem('f1')){showpage();}sessionStorage.setItem('f1','t'); }, 300);
+
+}); 
+$(document).ready(function() { cont(); });
+window.onload = function() {showpage();};
+$('.loading').click(function(){hidepage();});
 </script>
