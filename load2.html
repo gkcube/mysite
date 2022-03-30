@@ -10,13 +10,39 @@ setTimeout(function() {ld[0].innerHTML = "LOADING";if($('#popup2').is(':visible'
 delayloading(); 
 </script>
 
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/rpgexam/css@3/mock.css" />
-<script>
-function bodylock() {$('body').css('overflow','hidden');}
-  
-function bodyunlock() {$('body').css('overflow','visible');}
-</script>
 <style>.result {display:none;}#HTML15{display:block}
+
+#english  {font-style:normal; font-weight:600;font-family:Quicksand; }
+#bengali {font-weight:500;font-family:SolaimanLipi; }
+eng {font-style:normal; font-weight:600;font-family:Quicksand; }
+ben {font-weight:normal; font-style:normal;font-family:SolaimanLipi; }
+english  {font-style:normal; font-weight:600;font-family:Quicksand; }
+bengali {font-weight:normal; font-family:SolaimanLipi;}
+
+.m-i {font-family: 'Material Icons';font-weight: normal;font-style: normal; font-size: 24px; line-height: 1; letter-spacing: normal; text-transform: none;display: inline-block; white-space: nowrap; word-wrap: normal; direction: ltr; font-feature-settings: 'liga'; text-rendering: optimizeLegibility;vertical-align:middle;}
+button {outline : none;}
+button {outline: none;user-select: none;border:none;padding:none;box-shadow:none;background:none;color:white;font-family:bengali;}
+.ad {background-color:white;color:black;font-size:14px;padding-top:7px;padding-bottom:7px;min-height:150px;text-align:center;margin-top:5px}
+
+.fbcomments {color:black;font-size:14px;padding-bottom:7px;min-height:280px;text-align:center;background:url(https://cdn.jsdelivr.net/gh/gkcube/images/loading-1-0-1.svg);background-size: 102px;background-repeat: no-repeat;background-position: center center;background-color:white;}
+.fb-comments iframe{background-color:white;}
+.search  {font-weight: bold;font-size: 15px; background-color:white; color: black;  margin-bottom: 7px; margin-right: 0px; margin: auto; text-align: center; padding-top:10px; margin-top:0px;}
+
+.upbar {background-color:#2e86c1; text-align:center; border-width:0px; color: white; border-radius: 0px; font-weight: normal; font-style: normal; font-size: 14px;margin-top:7px; padding-top: 7px; padding-bottom: 7px; text-align: middle; font-family: Quicksand; display:block;width:100%;}
+
+.thumb { padding:0px; text-align:left; margin-bottom:2px;}
+@media only screen and (max-width: 600px) {
+ .thumb {display: none;}}
+
+
+@font-face {font-display: swap;font-family: Oswald; src:  url(https://fonts.gstatic.com/s/oswald/v16/TK3iWkUHHAIjg752GT8G.woff2) format('woff2');}
+@font-face {font-display: swap;font-family: Quicksand; src: url(https://fonts.gstatic.com/s/quicksand/v7/6xKtdSZaM9iE8KbpRA_hK1QN.woff2) format('woff2');}
+@font-face {font-display: swap;font-family: SolaimanLipi; src: url(https://cdn.jsdelivr.net/gh/gkcube/fonts@1/Solaiman.woff2) format('woff2');}
+@font-face {font-display: block;font-family: 'Material Icons';font-style: normal; font-weight: 400; src: url(https://fonts.gstatic.com/s/materialicons/v103/flUhRq6tzZclQEJ-Vdg-IuiaDsNc.woff2) format('woff2');}
+
+@font-face {font-family: bengali; src: url(https://cdn.jsdelivr.net/gh/gkcube/fonts@1/Solaiman.woff2) format('woff2');}
+@font-face {font-family: Roboto; src: url(https://fonts.gstatic.com/s/roboto/v27/KFOlCnqEu92Fr1MmSU5fBBc4.woff2) format('woff2');)}
+
 #sticky { position: fixed; margin-bottom:300px; top: 0px; left: 0px; z-index: 10; width:100%;color:black}
 
 .menubar {background-color:white; color: black; text-align:left; width:100%;height:54px;box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.5);padding-top:2px;}
@@ -70,213 +96,91 @@ sharebox {position:fixed;bottom:120px;left:5%;z-index:6;width:100%}
 
 </style>
 
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/rpgexam/css@3/mock.css" />
+<script>
+function bodylock() {$('body').css('overflow','hidden');}
+  
+function bodyunlock() {$('body').css('overflow','visible');}
+
+
+onhashchange = function (){ 
+  if(location.hash=='#go'){ } else{ $('body').css('overflow','visible'); $(".toggle").fadeOut('fast');}}
+
+ function hback() {if(location.hash=='#go'){history.back();}}
+  
+ function showmenu() {
+if(location.hash=='#go') {history.back();}
+else {
+
+location.hash = "go";$("#whitepopup").fadeIn('fast');  $(".tog").slideDown('fast');$('body').css('overflow','hidden');
+
+ }}
+</script>
+
+<div id="belowpopup" class="toggle" onclick="hback()";></div>
+<div id="whitepopup" class="toggle" onclick="hback()";></div>
+
+
+
+
+
+
+
 <div id="popup2" class="popup2">
 <div class="loadshadow"><div class="loader"></div><br />
 <loading>LOADING</loading></div></div>
 
 <div id="sticky">
-<div class="subhead">
-<button id="closebtn" class="lockb" onclick="toolicon()"><i class="m-i" style="font-size:25px;"><toolicon>&#xe5c4</toolicon></i></button>
+<div class="menubar">
+<a href="/">
+<button class="closebtn lockb" onclick="toolicon()">
+<i class="m-i" style="font-size:25px;"><toolicon>&#xe88a</toolicon></i></button>
+</a>
+
 <toolimg></toolimg>
+<a href="/">
 <button class="tooltitle">
-<tool1>Guess The Picture</tool1><br /><tool2>Animals</tool2>
+<tool1>RPGExam.COM</tool1><br/><tool2>Welcome!</tool2>
 </button>
-<button id="closebtnr" class="loading" onclick="location.reload()"><i class="m-i" style="font-size:28px;">&#xe5d5</i></button>
-<button class="lockb" id="closebtnr" onclick="location.replace('shareme://')"><i class="m-i" style="font-size:25px;">&#xe80d</i></button>
+</a>
+
+<button class="closebtnr mbar " onclick="showmenu();"><i class="m-i" style="font-size:25px;">&#xe5d2</i></button>
+<button class="closebtnr " onclick="share();"><i class="m-i" style="font-size:25px;">&#xe80d</i></button>
+
+<button class="closebtnr"  id="fsearch" onclick="hback();pselect()"><i class="m-i" style="font-size:28px;">&#xe8b6</i></button>
+
+</div>
+
+<div id="flipdown">
+<div id="psearch"><br/>
+<div id="gcsmobile"><gcse:searchbox-only></gcse:searchbox-only></div></div>
 </div></div>
+
+<div style="height:54px;"></div><brtag><brtag></brtag></brtag>
 <div id='moc'></div>
 
 <script>
 var url = 'https://api.github.com/repos/gkcube/mysite/git/refs/heads/main', tag;
-function repo(){
-fetch(url).then(r => r.json()).then((o) => {tag=o.object.sha;})}
-repo();
+function repo(){fetch(url).then(r => r.json()).then((o) => {tag=o.object.sha;})}
 
-function jsload() {
-$.getScript("https://cdn.jsdelivr.net/gh/gkcube/js@1/m1.js");
-$.getScript("https://cdn.jsdelivr.net/gh/gkcube/js@1/s1.js");
-}
+function jsload() {$.getScript("https://cdn.jsdelivr.net/gh/rpgexam/js@2/mock.js");}
 
-function ld(){
-
-var str = window.location.href,
-ur = new URL(str),
-ccc = ur.searchParams.get("c");
-
+function ld(){var str = window.location.href,ur = new URL(str),ccc = ur.searchParams.get("c");
 $("#moc").load("https://cdn.jsdelivr.net/gh/gkcube/mysite@"+tag+"/"+ccc+".html", 
-    function (responseText, textStatus, req) {
- if (textStatus == "error") {repo(); ld()} 
-});
-}
+    function (responseText, textStatus, req) {if (textStatus == "error") {repo(); ld()} else {jsload()}});}
 
+function getc(){$.getScript( "https://cdn.jsdelivr.net/gh/rpgexam/js@2/mock.js" )
+  .done(function() { ld();}).fail(function() {getc();});}
 
-$.when(
-$.getScript( "https://cdn.jsdelivr.net/gh/gkcube/js@1/m1.js" ),
-$.getScript( "https://cdn.jsdelivr.net/gh/gkcube/js@1/s1.js" ),
-).done(function(){jsload();ld();});
+jsload();getc();repo();
+window.onload = function(){setTimeout(function(){l.removeItem(q+'qw'); gotohome();}, 1500);}
 </script>
 
  
 <script src="https://cdn.jsdelivr.net/npm/swiper@6.7.1/swiper-bundle.min.js"></script>
 
-
-<script>
-<!-- Animal Quiz Language Change With Local Storage -->
-  
-function mylanguage() {  
-  if($('language1').html() == 'eng') {
-
-$('Animals').html('<tool1><ben>ছবি দেখে উত্তর দাও</tool1><br/><tool2><ben>পশু</tool2>'); 
-$('Alpaca').html('<ben>আলপাকা');
-$('Anteater').html('<ben>পিপীলিকাভুক');
-$('Baboon').html('<ben>বেবুন');
-$('Badger').html('<ben>ব্যাজার');
-$('Bat').html('<ben>বাদুড়');
-$('Barasingha').html('<ben>বারশিঙ্গা');
-$('Bear').html('<ben>ভালুক');
-$('beaver').html('<ben>বীবর');
-$('Bison').html('<ben>বুনো মোষ');
-$('Buffalo').html('<ben>মহিষ');
-$('Cat').html('<ben>বিড়াল');
-$('Chameleon').html('<ben>গিরগিটি');
-$('Cheetah').html('<ben>চিতা');
-$('Chimpanzee').html('<ben>শিম্পাঞ্জি');
-$('Cow').html('<ben>গোরু');
-$('Crocodile').html('<ben>কুমির');
-$('Deer').html('<ben>হরিণ');
-$('Dog').html('<ben>কুকুর');
-$('Dolphin').html('<ben>শুশুক');
-$('Donkey').html('<ben>গাধা');
-$('Elephant').html('<ben>হাতি');
-$('Fox').html('<ben>খেঁকশিয়াল');
-$('Gecko').html('<ben>গেকো');
-$('Giraffe').html('<ben>জিরাফ');
-$('Goat').html('<ben>ছাগল');
-$('Hippopotamus').html('<ben>জলহস্তী');
-$('Horse').html('<ben>ঘোড়া');
-$('Hyena').html('<ben>হায়না');
-$('Iguana').html('<ben>গোসাপ');
-$('Jackal').html('<ben>শিয়াল');
-$('Kangaroo').html('<ben>ক্যাঙ্গারু');
-$('Langur').html('<ben>লেঙ্গুর');
-$('Lemur').html('<ben>লেমুর');
-$('Lion').html('<ben>সিংহ');
-$('Lizard').html('<ben>টিকটিকি');
-$('Lynx').html('<ben>বনবিড়াল');
-$('Mole').html('<ben>ছুঁচো');
-$('Mongoose').html('<ben>নেউল');
-$('Monkey').html('<ben>বানর');
-$('Otter').html('<ben>ভোঁদড়');
-$('Panda').html('<ben>পান্ডা');
-$('Pangolin').html('<ben>বনরুই');
-$('Pig').html('<ben>শূকর');
-$('Polecat').html('<ben>খট্টাশ');
-$('Porcupine').html('<ben>শজারু');
-$('Rabbit').html('<ben>খরগোশ');
-$('Raccoon').html('<ben>র‍্যাকুন');
-$('Rat').html('<ben>ইঁদুর');
-$('Rhinoceros').html('<ben>গণ্ডার');
-$('Shark').html('<ben>হাঙ্গর');
-$('Sheep').html('<ben>ভেড়া');
-$('Snail').html('<ben>শামুক');
-$('Snake').html('<ben>সাপ');
-$('Squirrel').html('<ben>কাঠবিড়ালি');
-$('Tiger').html('<ben>বাঘ');
-$('Tortoise').html('<ben>কচ্ছপ');
-$('Whale').html('<ben>তিমি');
-$('Wolf').html('<ben>নেকড়ে');
-$('Zebra').html('<ben>জেব্রা');
-$('Score').html('<ben>স্কোর');
-$('Reset').html('<ben>রিসেট');
-$('Share').html('<ben>শেয়ার');
- 
-    
-
-$('Score').html('<ben>স্কোর');
-$('Reset').html('<ben>রিসেট');
-$('Share').html('<ben>শেয়ার');
-$('cl').html('<button id="lc2">ENGLISH</button><button id="lc1"><ben>বাংলা</button>');
-$('touchoption').html('<ben>সঠিক অপশনটি টাচ করুন !');
-$('CorrectAnswer').html('<ben>সঠিক উত্তর !');
-$('language1').html('bng');sessionStorage.setItem('cl','t');
-
-} else {
-
-$('Animals').html('<tool1>Guess The Picture</tool1><br/><tool2>Animals</tool2>'); 
-$('Alpaca').html('Alpaca');
-$('Anteater').html('Anteater');
-$('Baboon').html('Baboon');
-$('Badger').html('Badger');
-$('Bat').html('Bat');
-$('Barasingha').html('Barasingha');
-$('Bear').html('Bear');
-$('Beaver').html('Beaver');
-$('Bison').html('Bison');
-$('Buffalo').html('Buffalo');
-$('Cat').html('Cat');
-$('Chameleon').html('Chameleon');
-$('Cheetah').html('Cheetah');
-$('Chimpanzee').html('Chimpanzee');
-$('Cow').html('Cow');
-$('Crocodile').html('Crocodile');
-$('Deer').html('Deer');
-$('Dog').html('Dog');
-$('Dolphin').html('Dolphin');
-$('Donkey').html('Donkey');
-$('Elephant').html('Elephant');
-$('Fox').html('Fox');
-$('Gecko').html('Gecko');
-$('Giraffe').html('Giraffe');
-$('Goat').html('Goat');
-$('Hippopotamus').html('Hippopotamus');
-$('Horse').html('Horse');
-$('Hyena').html('Hyena');
-$('Iguana').html('Iguana');
-$('Jackal').html('Jackal');
-$('Kangaroo').html('Kangaroo');
-$('Langur').html('Langur');
-$('Lemur').html('Lemur');
-$('Lion').html('Lion');
-$('Lizard').html('Lizard');
-$('Lynx').html('Lynx');
-$('Mole').html('Mole');
-$('Mongoose').html('Mongoose');
-$('Monkey').html('Monkey');
-$('Otter').html('Otter');
-$('Panda').html('Panda');
-$('Pangolin').html('Pangolin');
-$('Pig').html('Pig');
-$('Polecat').html('Polecat');
-$('Porcupine').html('Porcupine');
-$('Rabbit').html('Rabbit');
-$('Raccoon').html('Raccoon');
-$('Rat').html('Rat');
-$('Rhinoceros').html('Rhinoceros');
-$('Shark').html('Shark');
-$('Sheep').html('Sheep');
-$('Snail').html('Snail');
-$('Snake').html('Snake');
-$('Squirrel').html('Squirrel');
-$('Tiger').html('Tiger');
-$('Tortoise').html('Tortoise');
-$('Whale').html('Whale');
-$('Wolf').html('Wolf');
-$('Zebra').html('Zebra');
-$('Score').html('Score');
-$('Reset').html('Reset');
-$('Share').html('Share');
-
-
-$('Score').html('Score');
-$('Reset').html('Reset');
-$('Share').html('Share');
-$('cl').html('<button id="lc1">ENGLISH</button><button id="lc2"><ben>বাংলা</button>');
-$('touchoption').html('Touch The Correct Option !');
-$('CorrectAnswer').html('Correct Answer !');
-$('language1').html('eng');sessionStorage.removeItem('cl');
-}}
-  
-</script>
 
 
 
