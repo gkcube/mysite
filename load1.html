@@ -5,7 +5,24 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/gkcube/css@e635e11/m.css">
 
 
-
+<div id="popup2" class="popup2">
+<div class="loadshadow">
+<div class="loader">
+</div>
+<br />
+<loading>LOADING</loading>
+</div>
+</div>
+<div id="sticky">
+<div class="subhead">
+<button id="closebtn" class="lockb" onclick="toolicon()"><i class="m-i" style="font-size:25px;"><toolicon>&#xe5c4</toolicon></i></button>
+<toolimg></toolimg>
+<button class="tooltitle">
+<tool1>Guess The Picture</tool1><br /><tool2>Animals</tool2>
+</button>
+<button id="closebtnr" class="loading" onclick="location.reload()"><i class="m-i" style="font-size:28px;">&#xe5d5</i></button>
+<button class="lockb" id="closebtnr" onclick="location.replace('shareme://')"><i class="m-i" style="font-size:25px;">&#xe80d</i></button>
+</div></div>
 <div id='moc'></div>
 
 <script>
@@ -30,31 +47,27 @@ $('#moc').load("https://cdn.jsdelivr.net/gh/gkcube/mysite@"+tag+"/"+ccc+".html")
 
 $.getScript('https://cdn.jsdelivr.net/gh/gkcube/js@1/s1.js', function() {
 $.getScript("https://cdn.jsdelivr.net/gh/gkcube/js@1/m1.js");            
-ld();
+
 
         });
+
+
+$.when(
+    $.getScript( "https://cdn.jsdelivr.net/gh/gkcube/js@1/m1.js" ),
+    $.getScript( "https://cdn.jsdelivr.net/gh/gkcube/js@1/s1.js" ),
+    $.Deferred(function( deferred ){
+        $( deferred.resolve );
+    })
+).done(function(){
+    
+   ld();
+    
+});
 </script>
 
  
 <script src="https://cdn.jsdelivr.net/npm/swiper@6.7.1/swiper-bundle.min.js"></script>
 
-<script>
-var swiper = new Swiper('.swiper-container',{loop: true, loopPreventsSlide: false,
-preloadImages: true, lazy: true,
-navigation: {nextEl: '.next-right',prevEl: '.next-left',},       });
-
-swiper.on('transitionEnd', function() {$(".next-right").removeClass("mynext");
-
-localStorage.setItem('ns1', swiper.activeIndex);  });
-var ns1 = localStorage.getItem('ns1');
-
-function gotoslide() {if (localStorage.getItem("ns1") === null) {
-swiper.slideTo(1,0,true); }else {swiper.slideTo(ns1,0,true);}  }
-    
-    gotoslide();
-   
-
-</script>
 
 <script>
 <!-- Animal Quiz Language Change With Local Storage -->
