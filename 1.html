@@ -1,1059 +1,228 @@
-
-<!DOCTYPE html>
-<html>
-<head>
-<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0' name='viewport' />
-<title>1 ANIMAL</title>
-
-<script src='https://cdn.jsdelivr.net/gh/gkcube/js@1/jquery.min.js'></script>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/gkcube/css@e635e11/m.css">
-</head>
-<body>
-<header>
-<div style="font-family:Zen Dots;position:absolute;opacity:0;">ZenDots</div>
-<div style="height:54px;"></div>
 <script>
+var q='1',
+l = localStorage,
+fullmin = "05:00",
+fullsec = "300",
+bmin='মি.',
+bsec='সে.',
+noanswer='উত্তর দেওয়া হয়নি',
+dhead1='WBCS | ভারতের ইতিহাস | Set-10';
+l.setItem(q+'qw', '1');
+document.getElementsByTagName('tool1')[0].innerHTML='WBCS Mock Test';
+document.getElementsByTagName('tool2')[0].innerHTML='ভারতের ইতিহাস | Set-10';
+
 function showpage() {$("#popup2").fadeOut();$(".lockb").css('pointer-events','auto');}
 function hidepage() {delayloading();$(".lockb").css('pointer-events','none'); $('#popup2').show();}
 </script>
+    
+<img style="display:none" alt="WBCS Free Online Mock Test Indian History Set 01" src="https://cdn.jsdelivr.net/gh/rpgexam/wbcs-mock-test/wbcs-mock-test-indian-history-set-10.jpg"/>
 
-<audio id="Audio2" preload="auto">
-<source src="https://cdn.jsdelivr.net/gh/gkcube/sound@v1.0.0.0/wrong.ogg" type="audio/ogg">
-</source></audio>
-<audio id="Audio1" preload="auto">
-<source src="https://cdn.jsdelivr.net/gh/gkcube/sound@v1.0.0.0/correct.ogg" type="audio/ogg">
-</source></audio>
-<script>
-var x = document.getElementById("Audio2"); function Audio2() { x.currentTime = 0; x.play();}
-var y = document.getElementById("Audio1"); function Audio1() { y.currentTime = 0; y.play();}
 
- function toolicon() {
- if(sessionStorage.getItem('1i')) {window.history.back();}
- else {location.replace('index-english.html'); }}
- 
-onhashchange = function (){ if(location.hash){ } else{ $("#resetpopup,#belowpopup").fadeOut('fast'); }}
+<div class='noti'>Message</div>
 
- function historyback() { if(location.hash){ history.back(); }  }
-  
- function showreset() {  location.hash = "go";$("#belowpopup").fadeIn('fast');$("#resetpopup").slideDown('fast'); }
-</script>
-<div id="belowpopup" onclick="historyback()" ;></div>
-<div id="resetpopup" class="dbox">Reset Score For Animals?<hr /><div align="center">
-<button class="resetbutton" onclick="historyback()">Cancel</button>
-<button class="doreset resetbutton" onclick="storagereset();">Reset</button>
-</div></div>
-<language1 hidden>eng</language1>
-<ben hidden>বাংলা</ben>
-</header>
-
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@6.7.1/swiper.min.css">
-
-<div class="swiper-container">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8.0.3/swiper.min.css">
+<div class="swiper" id="swiper">
 <div class="swiper-wrapper">
 
-<div class="swiper-slide">
-<div class="slide q1"><button class="corner-page-number">1</button>
-<div class="image-wrapper">
-<img src="https://cdn.statically.io/gh/gkcube/animal@1/tiger-1.jpg" /></div>
-<wm><button class="mood">-1<br /><i class="m-i">mood_bad</i></button></wm>
-<cm><button class="mood">+4<br /><i class="m-i">mood</i></button></cm>
-<button class="touch-option"><touchoption>Touch The Correct Option !</touchoption></button>
-<div class='ops'>
-<ww><button class="opt b1"><Rhinoceros>Rhinoceros</Rhinoceros></button></ww>
-<ww><button class="opt b2"><Jackal>Jackal</Jackal></button></ww>
-<ww><button class="opt b3"><Cow>Cow</Cow></button></ww>
-<ww><button class="opt c1"><Tiger>Tiger</Tiger></button></ww>
-<ch hidden>
-<button class="opt cbt1"><Tiger>Tiger</Tiger></button>
-<button class="opt cbt2"><CorrectAnswer>Correct Answer!</CorrectAnswer></button>
-</ch>
-</div></div></div>
+  
+<div class='swiper-slide'><div class='mqbox q1'><button class='mquestion'><srl>Q.<num>1</num></srl> <qs>'হিন্দু মেলার' আয়োজন করেন কে?</qs></button><opt><button class='ca y'>আপনার উত্তর</button></opt><o1><button class='o 1'>A</button><button class='optn'>কেশব চন্দ্র সেন</button></o1><o0><button class='o 0'>B</button><button class='optn'>নব গোপাল মিত্র</button></o0><o2><button class='o 2'>C</button><button class='optn'>স্বামী দয়ানন্দ সরস্বতী</button></o2><o3><button class='o 3'>D</button><button class='optn'>স্বামী বিবেকানন্দ</button></o3><c><button class='o'>X</button><button class='optn half'>Clear Answer</button></c><opt><button class='ca'>সঠিক উত্তর</button><button class='o 0'>B</button><button class='optn'>নব গোপাল মিত্র</button></opt><o4><button class='o 4'>M</button><button class='optn half'>Mark For Review</button></o4></div></div>
 
+<div class='swiper-slide'><div class='mqbox q2'><button class='mquestion'><srl>Q.<num>2</num></srl> <qs>"We shall make the settled fact unsettled." - কে বলেছিলেন ?</qs></button><opt><button class='ca y'>আপনার উত্তর</button></opt><o1><button class='o 1'>A</button><button class='optn'>বাল গঙ্গাধর তিলক</button></o1><o2><button class='o 2'>B</button><button class='optn'>মহাত্মা গান্ধী</button></o2><o0><button class='o 0'>C</button><button class='optn'>সুরেন্দ্রনাথ ব্যানার্জি</button></o0><o3><button class='o 3'>D</button><button class='optn'>লর্ড কার্জন</button></o3><c><button class='o'>X</button><button class='optn half'>Clear Answer</button></c><opt><button class='ca'>সঠিক উত্তর</button><button class='o 0'>C</button><button class='optn'>সুরেন্দ্রনাথ ব্যানার্জি</button></opt><o4><button class='o 4'>M</button><button class='optn half'>Mark For Review</button></o4></div></div>
 
-<div class="swiper-slide">
-<div class="slide q2"><button class="corner-page-number">2</button>
-<div class="image-wrapper">
-<img src="https://cdn.statically.io/gh/gkcube/animal@1/lion-1.jpeg" />
-</div>
-<wm><button class="mood">-1<br /><i class="m-i">mood_bad</i></button></wm>
-<cm><button class="mood">+4<br /><i class="m-i">mood</i></button></cm>
-<button class="touch-option"><touchoption>Touch The Correct Option !</touchoption></button>
-<div class='ops'>
-<ww><button class="opt b1"><Tiger>Tiger</Tiger></button></ww>
-<ww><button class="opt c1"><Lion>Lion</Lion></button></ww>
-<ww><button class="opt b2"><Deer>Deer</Deer></button></ww>
-<ww><button class="opt b3"><Cat>Cat</Cat></button></ww>
-<ch hidden>
-<button class="opt cbt1"><Lion>Lion</Lion></button>
-<button class="opt cbt2"><CorrectAnswer>Correct Answer!</CorrectAnswer></button>
-</ch>
-</div></div></div>
+<div class='swiper-slide'><div class='mqbox q3'><button class='mquestion'><srl>Q.<num>3</num></srl> <qs>ভারতের জাতীয় কংগ্রেসের দ্বিতীয় বার্ষিক অধিবেশনে কে সভাপতি ছিলেন ?</qs></button><opt><button class='ca y'>আপনার উত্তর</button></opt><o0><button class='o 0'>A</button><button class='optn'>দাদাভাই নৌরোজি</button></o0><o1><button class='o 1'>B</button><button class='optn'>ফিরোজ শাহ মেহতা</button></o1><o2><button class='o 2'>C</button><button class='optn'>উমেশ চন্দ্র বন্দ্যোপাধ্যায়</button></o2><o3><button class='o 3'>D</button><button class='optn'>বদরুদ্দিন তায়েবজি</button></o3><c><button class='o'>X</button><button class='optn half'>Clear Answer</button></c><opt><button class='ca'>সঠিক উত্তর</button><button class='o 0'>A</button><button class='optn'>দাদাভাই নৌরোজি</button></opt><o4><button class='o 4'>M</button><button class='optn half'>Mark For Review</button></o4></div></div>
 
+<div class='swiper-slide'><div class='mqbox q4'><button class='mquestion'><srl>Q.<num>4</num></srl> <qs>বঙ্গভঙ্গ কবে রদ হয় ?</qs></button><opt><button class='ca y'>আপনার উত্তর</button></opt><o1><button class='o 1'>A</button><button class='optn'>১৯০৫</button></o1><o2><button class='o 2'>B</button><button class='optn'>১৯০৬</button></o2><o3><button class='o 3'>C</button><button class='optn'>১৯১৯</button></o3><o0><button class='o 0'>D</button><button class='optn'>১৯১১</button></o0><c><button class='o'>X</button><button class='optn half'>Clear Answer</button></c><opt><button class='ca'>সঠিক উত্তর</button><button class='o 0'>D</button><button class='optn'>১৯১১</button></opt><o4><button class='o 4'>M</button><button class='optn half'>Mark For Review</button></o4></div></div>
 
-<div class="swiper-slide"><div class="slide q3"><button class="corner-page-number">3</button>
-<div class="image-wrapper">
-<img src="https://cdn.statically.io/gh/gkcube/animal@1/elephant-1.jpg" /></div>
-<wm><button class="mood">-1<br /><i class="m-i">mood_bad</i></button></wm>
-<cm><button class="mood">+4<br /><i class="m-i">mood</i></button></cm>
-<button class="touch-option"><touchoption>Touch The Correct Option !</touchoption></button>
-<div class='ops'>
-<ww><button class="opt b1"><Buffalo>Buffalo</Buffalo></button></ww>
-<ww><button class="opt b2"><Giraffe>Giraffe</Giraffe></button></ww>
-<ww><button class="opt c1"><Elephant>Elephant</Elephant></button></ww>
-<ww><button class="opt b3"><Cow>Cow</Cow></button></ww>
-<ch hidden>
-<button class="opt cbt1"><Elephant>Elephant</Elephant></button>
-<button class="opt cbt2"><CorrectAnswer>Correct Answer!</CorrectAnswer></button>
-</ch>
-</div></div></div>
+<div class='swiper-slide'><div class='mqbox q5'><button class='mquestion'><srl>Q.<num>5</num></srl> <qs>গদর পার্টি কোথায় অনুষ্ঠিত হয় ?</qs></button><opt><button class='ca y'>আপনার উত্তর</button></opt><o1><button class='o 1'>A</button><button class='optn'>ওয়াশিংটন</button></o1><o0><button class='o 0'>B</button><button class='optn'>সানফ্রান্সিসকো</button></o0><o2><button class='o 2'>C</button><button class='optn'>অমৃতসর</button></o2><o3><button class='o 3'>D</button><button class='optn'>লাহোর</button></o3><c><button class='o'>X</button><button class='optn half'>Clear Answer</button></c><opt><button class='ca'>সঠিক উত্তর</button><button class='o 0'>B</button><button class='optn'>সানফ্রান্সিসকো</button></opt><o4><button class='o 4'>M</button><button class='optn half'>Mark For Review</button></o4></div></div>
 
+<div class='swiper-slide'><div class='mqbox q6'><button class='mquestion'><srl>Q.<num>6</num></srl> <qs>'লাইফ ডিভাইন' কে রচনা করেন ?</qs></button><opt><button class='ca y'>আপনার উত্তর</button></opt><o0><button class='o 0'>A</button><button class='optn'>শ্রী অরবিন্দ ঘোষ</button></o0><o2><button class='o 2'>B</button><button class='optn'>কেশব চন্দ্র সেন</button></o2><o3><button class='o 3'>C</button><button class='optn'>ভাগিনী নবেদিতা</button></o3><o1><button class='o 1'>D</button><button class='optn'>স্বামী বিবেকানন্দ</button></o1><c><button class='o'>X</button><button class='optn half'>Clear Answer</button></c><opt><button class='ca'>সঠিক উত্তর</button><button class='o 0'>A</button><button class='optn'>শ্রী অরবিন্দ ঘোষ</button></opt><o4><button class='o 4'>M</button><button class='optn half'>Mark For Review</button></o4></div></div>
 
-<div class="swiper-slide"><div class="slide q4"><button class="corner-page-number">4</button>
-<div class="image-wrapper">
-<img src="https://cdn.statically.io/gh/gkcube/animal@1/bear-1.jpeg" /></div>
-<wm><button class="mood">-1<br /><i class="m-i">mood_bad</i></button></wm>
-<cm><button class="mood">+4<br /><i class="m-i">mood</i></button></cm>
-<button class="touch-option"><touchoption>Touch The Correct Option !</touchoption></button>
-<div class='ops'>
-<ww><button class="opt b1"><Chimpanzee>Chimpanzee</Chimpanzee></button></ww>
-<ww><button class="opt c1"><Bear>Bear</Bear></button></ww>
-<ww><button class="opt b2"><Pig>Pig</Pig></button></ww>
-<ww><button class="opt b3"><Lion>Lion</Lion></button></ww>
-<ch hidden>
-<button class="opt cbt1"><Bear>Bear</Bear></button>
-<button class="opt cbt2"><CorrectAnswer>Correct Answer!</CorrectAnswer></button>
-</ch>
-</div></div></div>
+<div class='swiper-slide'><div class='mqbox q7'><button class='mquestion'><srl>Q.<num>7</num></srl> <qs>কাকাসাহেব নামে কে পরিচিত ছিলেন ?</qs></button><opt><button class='ca y'>আপনার উত্তর</button></opt><o1><button class='o 1'>A</button><button class='optn'>এম.জি.রানাডে</button></o1><o2><button class='o 2'>B</button><button class='optn'>জি.এইচ.দেশমুখ</button></o2><o3><button class='o 3'>C</button><button class='optn'>নৌরজি ফাড়ুনজি</button></o3><o0><button class='o 0'>D</button><button class='optn'>জি.ভি.যোশী</button></o0><c><button class='o'>X</button><button class='optn half'>Clear Answer</button></c><opt><button class='ca'>সঠিক উত্তর</button><button class='o 0'>D</button><button class='optn'>জি.ভি.যোশী</button></opt><o4><button class='o 4'>M</button><button class='optn half'>Mark For Review</button></o4></div></div>
 
+<div class='swiper-slide'><div class='mqbox q8'><button class='mquestion'><srl>Q.<num>8</num></srl> <qs>"New Lamps of Old" প্রবন্ধটি কে লিখেছিলেন ?</qs></button><opt><button class='ca y'>আপনার উত্তর</button></opt><o1><button class='o 1'>A</button><button class='optn'>জে.এন. ব্যানার্জি</button></o1><o2><button class='o 2'>B</button><button class='optn'>সুরেন্দ্রনাথ বন্দ্যোপাধ্যায়</button></o2><o3><button class='o 3'>C</button><button class='optn'>বালগঙ্গাধর তিলক</button></o3><o0><button class='o 0'>D</button><button class='optn'>শ্রী অরবিন্দ ঘোষ</button></o0><c><button class='o'>X</button><button class='optn half'>Clear Answer</button></c><opt><button class='ca'>সঠিক উত্তর</button><button class='o 0'>D</button><button class='optn'>শ্রী অরবিন্দ ঘোষ</button></opt><o4><button class='o 4'>M</button><button class='optn half'>Mark For Review</button></o4></div></div>
 
-<div class="swiper-slide"><div class="slide q5"><button class="corner-page-number">5</button>
-<div class="image-wrapper">
-<img src="https://cdn.statically.io/gh/gkcube/animal@1/squirrel-1.jpg" /></div>
-<wm><button class="mood">-1<br /><i class="m-i">mood_bad</i></button></wm>
-<cm><button class="mood">+4<br /><i class="m-i">mood</i></button></cm>
-<button class="touch-option"><touchoption>Touch The Correct Option !</touchoption></button>
-<div class='ops'>
-<ww><button class="opt c1"><Squirrel>Squirrel</Squirrel></button></ww>
-<ww><button class="opt b1"><Chameleon>Chameleon</Chameleon></button></ww>
-<ww><button class="opt b2"><Kangaroo>Kangaroo</Kangaroo></button></ww>
-<ww><button class="opt b3"><Dog>Dog</Dog></button></ww>
-<ch hidden>
-<button class="opt cbt1"><Squirrel>Squirrel</Squirrel></button>
-<button class="opt cbt2"><CorrectAnswer>Correct Answer!</CorrectAnswer></button>
-</ch>
-</div></div></div>
+<div class='swiper-slide'><div class='mqbox q9'><button class='mquestion'><srl>Q.<num>9</num></srl> <qs>'ভারতমাতা' কে প্রকাশ করেন ?</qs></button><opt><button class='ca y'>আপনার উত্তর</button></opt><o1><button class='o 1'>A</button><button class='optn'>সুরেন্দ্রনাথ বন্দ্যোপাধ্যায়</button></o1><o2><button class='o 2'>B</button><button class='optn'>বালগঙ্গাধর তিলক</button></o2><o0><button class='o 0'>C</button><button class='optn'>অজিত সিং</button></o0><o3><button class='o 3'>D</button><button class='optn'>চিত্তরঞ্জন দাস</button></o3><c><button class='o'>X</button><button class='optn half'>Clear Answer</button></c><opt><button class='ca'>সঠিক উত্তর</button><button class='o 0'>C</button><button class='optn'>অজিত সিং</button></opt><o4><button class='o 4'>M</button><button class='optn half'>Mark For Review</button></o4></div></div>
 
+<div class='swiper-slide'><div class='mqbox q10'><button class='mquestion'><srl>Q.<num>10</num></srl> <qs>লক্ষ্ণৌ চুক্তি কবে স্বাক্ষরিত হয় ?</qs></button><opt><button class='ca y'>আপনার উত্তর</button></opt><o1><button class='o 1'>A</button><button class='optn'>১৯১৩</button></o1><o0><button class='o 0'>B</button><button class='optn'>১৯১৬</button></o0><o2><button class='o 2'>C</button><button class='optn'>১৯১৪</button></o2><o3><button class='o 3'>D</button><button class='optn'>১৯১৫</button></o3><c><button class='o'>X</button><button class='optn half'>Clear Answer</button></c><opt><button class='ca'>সঠিক উত্তর</button><button class='o 0'>B</button><button class='optn'>১৯১৬</button></opt><o4><button class='o 4'>M</button><button class='optn half'>Mark For Review</button></o4></div></div>
 
-<div class="swiper-slide"><div class="slide q6"><button class="corner-page-number">6</button>
-<div class="image-wrapper">
-<img src="https://cdn.statically.io/gh/gkcube/animal@1/snake-1.jpg" /></div>
-<wm><button class="mood">-1<br /><i class="m-i">mood_bad</i></button></wm>
-<cm><button class="mood">+4<br /><i class="m-i">mood</i></button></cm>
-<button class="touch-option"><touchoption>Touch The Correct Option !</touchoption></button>
-<div class='ops'>
-<ww><button class="opt b1"><Lizard>Lizard</Lizard></button></ww>
-<ww><button class="opt b2"><Iguana>Iguana</Iguana></button></ww>
-<ww><button class="opt c1"><Snake>Snake</Snake></button></ww>
-<ww><button class="opt b3"><Rat>Rat</Rat></button></ww>
-<ch hidden>
-<button class="opt cbt1"><Snake>Snake</Snake></button>
-<button class="opt cbt2"><CorrectAnswer>Correct Answer!</CorrectAnswer></button>
-</ch>
-</div></div></div>
+<div class='swiper-slide'><div class='mqbox q11'><button class='mquestion'><srl>Q.<num>11</num></srl> <qs>বারাণসীতে সেন্ট্রাল হিন্দু স্কুলের প্রতিষ্ঠাতা কে ?</qs></button><opt><button class='ca y'>আপনার উত্তর</button></opt><o1><button class='o 1'>A</button><button class='optn'>কেশবচন্দ্র সেন</button></o1><o2><button class='o 2'>B</button><button class='optn'>জি.এইচ.দেশমুখ</button></o2><o0><button class='o 0'>C</button><button class='optn'>শ্রীমতী অ্যানি বেসান্ত</button></o0><o3><button class='o 3'>D</button><button class='optn'>এম.জি.রানাডে</button></o3><c><button class='o'>X</button><button class='optn half'>Clear Answer</button></c><opt><button class='ca'>সঠিক উত্তর</button><button class='o 0'>C</button><button class='optn'>শ্রীমতী অ্যানি বেসান্ত</button></opt><o4><button class='o 4'>M</button><button class='optn half'>Mark For Review</button></o4></div></div>
 
+<div class='swiper-slide'><div class='mqbox q12'><button class='mquestion'><srl>Q.<num>12</num></srl> <qs>'ঐতিহ্যবাহী আধুনিকতাবাদী' কাকে বলা হয় ?</qs></button><opt><button class='ca y'>আপনার উত্তর</button></opt><o1><button class='o 1'>A</button><button class='optn'>রামমোহন রায়</button></o1><o2><button class='o 2'>B</button><button class='optn'>বালগঙ্গাধর তিলক</button></o2><o0><button class='o 0'>C</button><button class='optn'>বিদ্যাসাগর</button></o0><o3><button class='o 3'>D</button><button class='optn'>স্বামী বিবেকানন্দ</button></o3><c><button class='o'>X</button><button class='optn half'>Clear Answer</button></c><opt><button class='ca'>সঠিক উত্তর</button><button class='o 0'>C</button><button class='optn'>বিদ্যাসাগর</button></opt><o4><button class='o 4'>M</button><button class='optn half'>Mark For Review</button></o4></div></div>
 
-<div class="swiper-slide"><div class="slide q7"><button class="corner-page-number">7</button>
-<div class="image-wrapper">
-<img src="https://cdn.statically.io/gh/gkcube/animal@1/polecat-1.jpg" /></div>
-<wm><button class="mood">-1<br /><i class="m-i">mood_bad</i></button></wm>
-<cm><button class="mood">+4<br /><i class="m-i">mood</i></button></cm>
-<button class="touch-option"><touchoption>Touch The Correct Option !</touchoption></button>
-<div class='ops'>
-<ww><button class="opt b1"><Otter>Otter</Otter></button></ww>
-<ww><button class="opt b2"><Fox>Fox</Fox></button></ww>
-<ww><button class="opt b3"><Rabbit>Rabbit</Rabbit></button></ww>
-<ww><button class="opt c1"><Polecat>Polecat</Polecat></button></ww>
-<ch hidden>
-<button class="opt cbt1"><Polecat>Polecat</Polecat></button>
-<button class="opt cbt2"><CorrectAnswer>Correct Answer!</CorrectAnswer></button>
-</ch>
-</div></div></div>
+<div class='swiper-slide'><div class='mqbox q13'><button class='mquestion'><srl>Q.<num>13</num></srl> <qs>হিন্দু পুনরুজ্জীবনবাদের অন্যতম প্রধান প্রবক্তা কাকে বলা হয় ?</qs></button><opt><button class='ca y'>আপনার উত্তর</button></opt><o1><button class='o 1'>A</button><button class='optn'>রামমোহন রায়</button></o1><o2><button class='o 2'>B</button><button class='optn'>লালা হংসরাজ</button></o2><o3><button class='o 3'>C</button><button class='optn'>স্বামী বিবেকানন্দ</button></o3><o0><button class='o 0'>D</button><button class='optn'>স্বামী দয়ানন্দ সরস্বতী</button></o0><c><button class='o'>X</button><button class='optn half'>Clear Answer</button></c><opt><button class='ca'>সঠিক উত্তর</button><button class='o 0'>D</button><button class='optn'>স্বামী দয়ানন্দ সরস্বতী</button></opt><o4><button class='o 4'>M</button><button class='optn half'>Mark For Review</button></o4></div></div>
 
+<div class='swiper-slide'><div class='mqbox q14'><button class='mquestion'><srl>Q.<num>14</num></srl> <qs>শিকাগোর 'ধর্ম মহাসভা ' কবে আয়োজিত হয়েছিল ?</qs></button><opt><button class='ca y'>আপনার উত্তর</button></opt><o1><button class='o 1'>A</button><button class='optn'>১৮৮৫</button></o1><o2><button class='o 2'>B</button><button class='optn'>১৮৮৬</button></o2><o0><button class='o 0'>C</button><button class='optn'>১৮৬৩</button></o0><o3><button class='o 3'>D</button><button class='optn'>১৮৬৪</button></o3><c><button class='o'>X</button><button class='optn half'>Clear Answer</button></c><opt><button class='ca'>সঠিক উত্তর</button><button class='o 0'>C</button><button class='optn'>১৮৬৩</button></opt><o4><button class='o 4'>M</button><button class='optn half'>Mark For Review</button></o4></div></div>
 
-<div class="swiper-slide"><div class="slide q8"><button class="corner-page-number">8</button>
-<div class="image-wrapper">
-<img src="https://cdn.statically.io/gh/gkcube/animal@1/badger-1.jpg" /></div>
-<wm><button class="mood">-1<br /><i class="m-i">mood_bad</i></button></wm>
-<cm><button class="mood">+4<br /><i class="m-i">mood</i></button></cm>
-<button class="touch-option"><touchoption>Touch The Correct Option !</touchoption></button>
-<div class='ops'>
-<ww><button class="opt c1"><Badger>Badger</Badger></button></ww>
-<ww><button class="opt b1"><Pig>Pig</Pig></button></ww>
-<ww><button class="opt b2"><Kangaroo>Kangaroo</Kangaroo></button></ww>
-<ww><button class="opt b3"><Otter>Otter</Otter></button></ww>
-<ch hidden>
-<button class="opt cbt1"><Badger>Badger</Badger></button>
-<button class="opt cbt2"><CorrectAnswer>Correct Answer!</CorrectAnswer></button>
-</ch>
-</div></div></div>
+<div class='swiper-slide'><div class='mqbox q15'><button class='mquestion'><srl>Q.<num>15</num></srl> <qs>'মারহাট্টা' প্রকাশ করেন কে?</qs></button><opt><button class='ca y'>আপনার উত্তর</button></opt><o0><button class='o 0'>A</button><button class='optn'>বালগঙ্গাধর তিলক</button></o0><o1><button class='o 1'>B</button><button class='optn'>সাভারকর</button></o1><o2><button class='o 2'>C</button><button class='optn'>দেশমুখ</button></o2><o3><button class='o 3'>D</button><button class='optn'>মহাদেব গোবিন্দ রানাডে</button></o3><c><button class='o'>X</button><button class='optn half'>Clear Answer</button></c><opt><button class='ca'>সঠিক উত্তর</button><button class='o 0'>A</button><button class='optn'>বালগঙ্গাধর তিলক</button></opt><o4><button class='o 4'>M</button><button class='optn half'>Mark For Review</button></o4></div></div>
 
 
-<div class="swiper-slide"><div class="slide q9"><button class="corner-page-number">9</button>
-<div class="image-wrapper">
-<img src="https://cdn.statically.io/gh/gkcube/animal@1/porcupine-1.jpg" /></div>
-<wm><button class="mood">-1<br /><i class="m-i">mood_bad</i></button></wm>
-<cm><button class="mood">+4<br /><i class="m-i">mood</i></button></cm>
-<button class="touch-option"><touchoption>Touch The Correct Option !</touchoption></button>
-<div class='ops'>
-<ww><button class="opt b1"><Alpaca>Alpaca</Alpaca></button></ww>
-<ww><button class="opt b2"><Langur>Langur</Langur></button></ww>
-<ww><button class="opt c1"><Porcupine>Porcupine</Porcupine></button></ww>
-<ww><button class="opt b3"><Rat>Rat</Rat></button></ww>
-<ch hidden>
-<button class="opt cbt1"><Porcupine>Porcupine</Porcupine></button>
-<button class="opt cbt2"><CorrectAnswer>Correct Answer!</CorrectAnswer></button>
-</ch>
-</div></div></div>
-
-
-<div class="swiper-slide"><div class="slide q10"><button class="corner-page-number">10</button>
-<div class="image-wrapper">
-<img src="https://cdn.statically.io/gh/gkcube/animal@1/zebra-1.jpg" /></div>
-<wm><button class="mood">-1<br /><i class="m-i">mood_bad</i></button></wm>
-<cm><button class="mood">+4<br /><i class="m-i">mood</i></button></cm>
-<button class="touch-option"><touchoption>Touch The Correct Option !</touchoption></button>
-<div class='ops'>
-<ww><button class="opt b1"><Giraffe>Giraffe</Giraffe></button></ww>
-<ww><button class="opt b2"><Horse>Horse</Horse></button></ww>
-<ww><button class="opt b3"><Donkey>Donkey</Donkey></button></ww>
-<ww><button class="opt c1"><Zebra>Zebra</Zebra></button></ww>
-<ch hidden>
-<button class="opt cbt1"><Zebra>Zebra</Zebra></button>
-<button class="opt cbt2"><CorrectAnswer>Correct Answer!</CorrectAnswer></button>
-</ch>
-</div></div></div>
-
-
-<div class="swiper-slide"><div class="slide q11"><button class="corner-page-number">11</button>
-<div class="image-wrapper">
-<img src="https://cdn.statically.io/gh/gkcube/animal@1/sheep-1.jpg" /></div>
-<wm><button class="mood">-1<br /><i class="m-i">mood_bad</i></button></wm>
-<cm><button class="mood">+4<br /><i class="m-i">mood</i></button></cm>
-<button class="touch-option"><touchoption>Touch The Correct Option !</touchoption></button>
-<div class='ops'>
-<ww><button class="opt c1"><Sheep>Sheep</Sheep></button></ww>
-<ww><button class="opt b1"><Alpaca>Alpaca</Alpaca></button></ww>
-<ww><button class="opt b2"><Goat>Goat</Goat></button></ww>
-<ww><button class="opt b3"><Panda>Panda</Panda></button></ww>
-<ch hidden>
-<button class="opt cbt1"><Sheep>Sheep</Sheep></button>
-<button class="opt cbt2"><CorrectAnswer>Correct Answer!</CorrectAnswer></button>
-</ch>
-</div></div></div>
-
-
-<div class="swiper-slide"><div class="slide q12"><button class="corner-page-number">12</button>
-<div class="image-wrapper">
-<img src="https://cdn.statically.io/gh/gkcube/animal@1/dog-1.jpg" /></div>
-<wm><button class="mood">-1<br /><i class="m-i">mood_bad</i></button></wm>
-<cm><button class="mood">+4<br /><i class="m-i">mood</i></button></cm>
-<button class="touch-option"><touchoption>Touch The Correct Option !</touchoption></button>
-<div class='ops'>
-<ww><button class="opt b1"><Goat>Goat</Goat></button></ww>
-<ww><button class="opt b2"><Fox>Fox</Fox></button></ww>
-<ww><button class="opt c1"><Dog>Dog</Dog></button></ww>
-<ww><button class="opt b3"><Hyena>Hyena</Hyena></button></ww>
-<ch hidden>
-<button class="opt cbt1"><Dog>Dog</Dog></button>
-<button class="opt cbt2"><CorrectAnswer>Correct Answer!</CorrectAnswer></button>
-</ch>
-</div></div></div>
-
-
-<div class="swiper-slide"><div class="slide q13"><button class="corner-page-number">13</button>
-<div class="image-wrapper">
-<img src="https://cdn.statically.io/gh/gkcube/animal@1/cat-1.jpg" /></div>
-<wm><button class="mood">-1<br /><i class="m-i">mood_bad</i></button></wm>
-<cm><button class="mood">+4<br /><i class="m-i">mood</i></button></cm>
-<button class="touch-option"><touchoption>Touch The Correct Option !</touchoption></button>
-<div class='ops'>
-<ww><button class="opt b1"><Kangaroo>Kangaroo</Kangaroo></button></ww>
-<ww><button class="opt c1"><Cat>Cat</Cat></button></ww>
-<ww><button class="opt b2"><Lemur>Lemur</Lemur></button></ww>
-<ww><button class="opt b3"><Polecat>Polecat</Polecat></button></ww>
-<ch hidden>
-<button class="opt cbt1"><Cat>Cat</Cat></button>
-<button class="opt cbt2"><CorrectAnswer>Correct Answer!</CorrectAnswer></button>
-</ch>
-</div></div></div>
-
-
-<div class="swiper-slide"><div class="slide q14"><button class="corner-page-number">14</button>
-<div class="image-wrapper"><img src="https://cdn.statically.io/gh/gkcube/animal@1/cheetah-1.jpg" /></div>
-<wm><button class="mood">-1<br /><i class="m-i">mood_bad</i></button></wm>
-<cm><button class="mood">+4<br /><i class="m-i">mood</i></button></cm>
-<button class="touch-option"><touchoption>Touch The Correct Option !</touchoption></button>
-<div class='ops'>
-<ww><button class="opt b1"><Tiger>Tiger</Tiger></button></ww>
-<ww><button class="opt b2"><Wolf>Wolf</Wolf></button></ww>
-<ww><button class="opt b3"><Lion>Lion</Lion></button></ww>
-<ww><button class="opt c1"><Cheetah>Cheetah</Cheetah></button></ww>
-<ch hidden>
-<button class="opt cbt1"><Cheetah>Cheetah</Cheetah></button>
-<button class="opt cbt2"><CorrectAnswer>Correct Answer!</CorrectAnswer></button>
-</ch>
-</div></div></div>
-
-
-<div class="swiper-slide"><div class="slide q15"><button class="corner-page-number">15</button>
-<div class="image-wrapper"><img src="https://cdn.statically.io/gh/gkcube/animal@1/bat-1.jpg" /></div>
-<wm><button class="mood">-1<br /><i class="m-i">mood_bad</i></button></wm>
-<cm><button class="mood">+4<br /><i class="m-i">mood</i></button></cm>
-<button class="touch-option"><touchoption>Touch The Correct Option !</touchoption></button>
-<div class='ops'>
-<ww><button class="opt b1"><Mole>Mole</Mole></button></ww>
-<ww><button class="opt c1"><Bat>Bat</Bat></button></ww>
-<ww><button class="opt b2"><Anteater>Anteater</Anteater></button></ww>
-<ww><button class="opt b3"><Tortoise>Tortoise</Tortoise></button></ww>
-<ch hidden>
-<button class="opt cbt1"><Bat>Bat</Bat></button>
-<button class="opt cbt2"><CorrectAnswer>Correct Answer!</CorrectAnswer></button>
-</ch>
-</div></div></div>
-
-
-<div class="swiper-slide"><div class="slide q16"><button class="corner-page-number">16</button>
-<div class="image-wrapper">
-<img src="https://cdn.statically.io/gh/gkcube/animal@1/bison-1.jpg" /></div>
-<wm><button class="mood">-1<br /><i class="m-i">mood_bad</i></button></wm>
-<cm><button class="mood">+4<br /><i class="m-i">mood</i></button></cm>
-<button class="touch-option"><touchoption>Touch The Correct Option !</touchoption></button>
-<div class='ops'>
-<ww><button class="opt c1"><Bison>Bison</Bison></button></ww>
-<ww><button class="opt b1"><Cow>Cow</Cow></button></ww>
-<ww><button class="opt b2"><Buffalo>Buffalo</Buffalo></button></ww>
-<ww><button class="opt b3"><Rhinoceros>Rhinoceros</Rhinoceros></button></ww>
-<ch hidden>
-<button class="opt cbt1"><Bison>Bison</Bison></button>
-<button class="opt cbt2"><CorrectAnswer>Correct Answer!</CorrectAnswer></button>
-</ch>
-</div></div></div>
-
-
-<div class="swiper-slide"><div class="slide q17"><button class="corner-page-number">17</button>
-<div class="image-wrapper">
-<img src="https://cdn.statically.io/gh/gkcube/animal@1/alpaca-1.jpg" /></div>
-<wm><button class="mood">-1<br /><i class="m-i">mood_bad</i></button></wm>
-<cm><button class="mood">+4<br /><i class="m-i">mood</i></button></cm>
-<button class="touch-option"><touchoption>Touch The Correct Option !</touchoption></button>
-<div class='ops'>
-<ww><button class="opt b1"><Sheep>Sheep</Sheep></button></ww>
-<ww><button class="opt b2"><Deer>Deer</Deer></button></ww>
-<ww><button class="opt c1"><Alpaca>Alpaca</Alpaca></button></ww>
-<ww><button class="opt b3"><Donkey>Donkey</Donkey></button></ww>
-<ch hidden>
-<button class="opt cbt1"><Alpaca>Alpaca</Alpaca></button>
-<button class="opt cbt2"><CorrectAnswer>Correct Answer!</CorrectAnswer></button>
-</ch>
-</div></div></div>
-
-
-<div class="swiper-slide"><div class="slide q18"><button class="corner-page-number">18</button>
-<div class="image-wrapper">
-<img src="https://cdn.statically.io/gh/gkcube/animal@1/horse-1.jpg" /></div>
-<wm><button class="mood">-1<br /><i class="m-i">mood_bad</i></button></wm>
-<cm><button class="mood">+4<br /><i class="m-i">mood</i></button></cm>
-<button class="touch-option"><touchoption>Touch The Correct Option !</touchoption></button>
-<div class='ops'>
-<ww><button class="opt c1"><Horse>Horse</Horse></button></ww>
-<ww><button class="opt b1"><Donkey>Donkey</Donkey></button></ww>
-<ww><button class="opt b2"><Barasingha>Barasingha</Barasingha></button></ww>
-<ww><button class="opt b3"><Baboon>Baboon</Baboon></button></ww>
-<ch hidden>
-<button class="opt cbt1"><Horse>Horse</Horse></button>
-<button class="opt cbt2"><CorrectAnswer>Correct Answer!</CorrectAnswer></button>
-</ch>
-</div></div></div>
-
-
-<div class="swiper-slide"><div class="slide q19"><button class="corner-page-number">19</button>
-<div class="image-wrapper">
-<img src="https://cdn.statically.io/gh/gkcube/animal@1/tortoise-1.jpg" /></div>
-<wm><button class="mood">-1<br /><i class="m-i">mood_bad</i></button></wm>
-<cm><button class="mood">+4<br /><i class="m-i">mood</i></button></cm>
-<button class="touch-option"><touchoption>Touch The Correct Option !</touchoption></button>
-<div class='ops'>
-<ww><button class="opt b1"><Snail>Snail</Snail></button></ww>
-<ww><button class="opt b2"><Shark>Shark</Shark></button></ww>
-<ww><button class="opt c1"><Tortoise>Tortoise</Tortoise></button></ww>
-<ww><button class="opt b3"><Dolphin>Dolphin</Dolphin></button></ww>
-<ch hidden>
-<button class="opt cbt1"><Tortoise>Tortoise</Tortoise></button>
-<button class="opt cbt2"><CorrectAnswer>Correct Answer!</CorrectAnswer></button>
-</ch>
-</div></div></div>
-
-
-<div class="swiper-slide"><div class="slide q20"><button class="corner-page-number">20</button>
-<div class="image-wrapper">
-<img src="https://cdn.statically.io/gh/gkcube/animal@1/kangaroo-1.jpg" /></div>
-<wm><button class="mood">-1<br /><i class="m-i">mood_bad</i></button></wm>
-<cm><button class="mood">+4<br /><i class="m-i">mood</i></button></cm>
-<button class="touch-option"><touchoption>Touch The Correct Option !</touchoption></button>
-<div class='ops'>
-<ww><button class="opt b1"><Mongoose>Mongoose</Mongoose></button></ww>
-<ww><button class="opt b2"><Langur>Langur</Langur></button></ww>
-<ww><button class="opt b3"><Jackal>Jackal</Jackal></button></ww>
-<ww><button class="opt c1"><Kangaroo>Kangaroo</Kangaroo></button></ww>
-<ch hidden>
-<button class="opt cbt1"><Kangaroo>Kangaroo</Kangaroo></button>
-<button class="opt cbt2"><CorrectAnswer>Correct Answer!</CorrectAnswer></button>
-</ch>
-</div></div></div>
-
-
-<div class="swiper-slide"><div class="slide q21"><button class="corner-page-number">21</button>
-<div class="image-wrapper">
-<img src="https://cdn.statically.io/gh/gkcube/animal@1/buffalo-1.jpg" /></div>
-<wm><button class="mood">-1<br /><i class="m-i">mood_bad</i></button></wm>
-<cm><button class="mood">+4<br /><i class="m-i">mood</i></button></cm>
-<button class="touch-option"><touchoption>Touch The Correct Option !</touchoption></button>
-<div class='ops'>
-<ww><button class="opt b1"><Cow>Cow</Cow></button></ww>
-<ww><button class="opt c1"><Buffalo>Buffalo</Buffalo></button></ww>
-<ww><button class="opt b2"><Rhinoceros>Rhinoceros</Rhinoceros></button></ww>
-<ww><button class="opt b3"><Elephant>Elephant</Elephant></button></ww>
-<ch hidden>
-<button class="opt cbt1"><Buffalo>Buffalo</Buffalo></button>
-<button class="opt cbt2"><CorrectAnswer>Correct Answer!</CorrectAnswer></button>
-</ch>
-</div></div></div>
-
-
-<div class="swiper-slide"><div class="slide q22"><button class="corner-page-number">22</button>
-<div class="image-wrapper">
-<img src="https://cdn.statically.io/gh/gkcube/animal@1/crocodile-1.jpg" /></div>
-<wm><button class="mood">-1<br /><i class="m-i">mood_bad</i></button></wm>
-<cm><button class="mood">+4<br /><i class="m-i">mood</i></button></cm>
-<button class="touch-option"><touchoption>Touch The Correct Option !</touchoption></button>
-<div class='ops'>
-<ww><button class="opt c1"><Crocodile>Crocodile</Crocodile></button></ww>
-<ww><button class="opt b1"><Iguana>Iguana</Iguana></button></ww>
-<ww><button class="opt b2"><Whale>Whale</Whale></button></ww>
-<ww><button class="opt b3"><Shark>Shark</Shark></button></ww>
-<ch hidden>
-<button class="opt cbt1"><Crocodile>Crocodile</Crocodile></button>
-<button class="opt cbt2"><CorrectAnswer>Correct Answer!</CorrectAnswer></button>
-</ch>
-</div></div></div>
-
-
-<div class="swiper-slide"><div class="slide q23"><button class="corner-page-number">23</button>
-<div class="image-wrapper">
-<img src="https://cdn.statically.io/gh/gkcube/animal@1/giraffe-1.jpg" /></div>
-<wm><button class="mood">-1<br /><i class="m-i">mood_bad</i></button></wm>
-<cm><button class="mood">+4<br /><i class="m-i">mood</i></button></cm>
-<button class="touch-option"><touchoption>Touch The Correct Option !</touchoption></button>
-<div class='ops'>
-<ww><button class="opt b1"><Zebra>Zebra</Zebra></button></ww>
-<ww><button class="opt b2"><Deer>Deer</Deer></button></ww>
-<ww><button class="opt c1"><Giraffe>Giraffe</Giraffe></button></ww>
-<ww><button class="opt b3"><Horse>Horse</Horse></button></ww>
-<ch hidden>
-<button class="opt cbt1"><Giraffe>Giraffe</Giraffe></button>
-<button class="opt cbt2"><CorrectAnswer>Correct Answer!</CorrectAnswer></button>
-</ch>
-</div></div></div>
-
-
-<div class="swiper-slide"><div class="slide q24"><button class="corner-page-number">24</button>
-<div class="image-wrapper">
-<img src="https://cdn.statically.io/gh/gkcube/animal@1/whale-1.jpg" /></div>
-<wm><button class="mood">-1<br /><i class="m-i">mood_bad</i></button></wm>
-<cm><button class="mood">+4<br /><i class="m-i">mood</i></button></cm>
-<button class="touch-option"><touchoption>Touch The Correct Option !</touchoption></button>
-<div class='ops'>
-<ww><button class="opt b1"><Dolphin>Dolphin</Dolphin></button></ww>
-<ww><button class="opt b2"><Crocodile>Crocodile</Crocodile></button></ww>
-<ww><button class="opt b3"><Shark>Shark</Shark></button></ww>
-<ww><button class="opt c1"><Whale>Whale</Whale></button></ww>
-<ch hidden>
-<button class="opt cbt1"><Whale>Whale</Whale></button>
-<button class="opt cbt2"><CorrectAnswer>Correct Answer!</CorrectAnswer></button>
-</ch>
-</div></div></div>
-
-
-<div class="swiper-slide"><div class="slide q25"><button class="corner-page-number">25</button>
-<div class="image-wrapper">
-<img src="https://cdn.statically.io/gh/gkcube/animal@1/mongoose-1.jpg" /></div>
-<wm><button class="mood">-1<br /><i class="m-i">mood_bad</i></button></wm>
-<cm><button class="mood">+4<br /><i class="m-i">mood</i></button></cm>
-<button class="touch-option"><touchoption>Touch The Correct Option !</touchoption></button>
-<div class='ops'>
-<ww><button class="opt c1"><Mongoose>Mongoose</Mongoose></button></ww>
-<ww><button class="opt b1"><Kangaroo>Kangaroo</Kangaroo></button></ww>
-<ww><button class="opt b2"><Otter>Otter</Otter></button></ww>
-<ww><button class="opt b3"><Pangolin>Pangolin</Pangolin></button></ww>
-<ch hidden>
-<button class="opt cbt1"><Mongoose>Mongoose</Mongoose></button>
-<button class="opt cbt2"><CorrectAnswer>Correct Answer!</CorrectAnswer></button>
-</ch>
-</div></div></div>
-
-
-<div class="swiper-slide"><div class="slide q26"><button class="corner-page-number">26</button>
-<div class="image-wrapper">
-<img src="https://cdn.statically.io/gh/gkcube/animal@1/langur-1.jpg" /></div>
-<wm><button class="mood">-1<br /><i class="m-i">mood_bad</i></button></wm>
-<cm><button class="mood">+4<br /><i class="m-i">mood</i></button></cm>
-<button class="touch-option"><touchoption>Touch The Correct Option !</touchoption></button>
-<div class='ops'>
-<ww><button class="opt b1"><Monkey>Monkey</Monkey></button></ww>
-<ww><button class="opt b2"><Chimpanzee>Chimpanzee</Chimpanzee></button></ww>
-<ww><button class="opt b3"><Baboon>Baboon</Baboon></button></ww>
-<ww><button class="opt c1"><Langur>Langur</Langur></button></ww>
-<ch hidden>
-<button class="opt cbt1"><Langur>Langur</Langur></button>
-<button class="opt cbt2"><CorrectAnswer>Correct Answer!</CorrectAnswer></button>
-</ch>
-</div></div></div>
-
-
-<div class="swiper-slide"><div class="slide q27"><button class="corner-page-number">27</button>
-<div class="image-wrapper">
-<img src="https://cdn.statically.io/gh/gkcube/animal@1/jackal-1.jpg" /></div>
-<wm><button class="mood">-1<br /><i class="m-i">mood_bad</i></button></wm>
-<cm><button class="mood">+4<br /><i class="m-i">mood</i></button></cm>
-<button class="touch-option"><touchoption>Touch The Correct Option !</touchoption></button>
-<div class='ops'>
-<ww><button class="opt b1"><Hyena>Hyena</Hyena></button></ww>
-<ww><button class="opt c1"><Jackal>Jackal</Jackal></button></ww>
-<ww><button class="opt b2"><Wolf>Wolf</Wolf></button></ww>
-<ww><button class="opt b3"><Lynx>Lynx</Lynx></button></ww>
-<ch hidden>
-<button class="opt cbt1"><Jackal>Jackal</Jackal></button>
-<button class="opt cbt2"><CorrectAnswer>Correct Answer!</CorrectAnswer></button>
-</ch>
-</div></div></div>
-
-
-<div class="swiper-slide"><div class="slide q28"><button class="corner-page-number">28</button>
-<div class="image-wrapper">
-<img src="https://cdn.statically.io/gh/gkcube/animal@1/lemur-1.jpg" /></div>
-<wm><button class="mood">-1<br /><i class="m-i">mood_bad</i></button></wm>
-<cm><button class="mood">+4<br /><i class="m-i">mood</i></button></cm>
-<button class="touch-option"><touchoption>Touch The Correct Option !</touchoption></button>
-<div class='ops'>
-<ww><button class="opt b1"><Panda>Panda</Panda></button></ww>
-<ww><button class="opt b2"><Langur>Langur</Langur></button></ww>
-<ww><button class="opt c1"><Lemur>Lemur</Lemur></button></ww>
-<ww><button class="opt b3"><Mongoose>Mongoose</Mongoose></button></ww>
-<ch hidden>
-<button class="opt cbt1"><Lemur>Lemur</Lemur></button>
-<button class="opt cbt2"><CorrectAnswer>Correct Answer!</CorrectAnswer></button>
-</ch>
-</div></div></div>
-
-
-<div class="swiper-slide"><div class="slide q29"><button class="corner-page-number">29</button>
-<div class="image-wrapper">
-<img src="https://cdn.statically.io/gh/gkcube/animal@1/monkey-1.jpg" /></div>
-<wm><button class="mood">-1<br /><i class="m-i">mood_bad</i></button></wm>
-<cm><button class="mood">+4<br /><i class="m-i">mood</i></button></cm>
-<button class="touch-option"><touchoption>Touch The Correct Option !</touchoption></button>
-<div class='ops'>
-<ww><button class="opt b1"><Langur>Langur</Langur></button></ww>
-<ww><button class="opt c1"><Monkey>Monkey</Monkey></button></ww>
-<ww><button class="opt b2"><Chimpanzee>Chimpanzee</Chimpanzee></button></ww>
-<ww><button class="opt b3"><Baboon>Baboon</Baboon></button></ww>
-<ch hidden>
-<button class="opt cbt1"><Monkey>Monkey</Monkey></button>
-<button class="opt cbt2"><CorrectAnswer>Correct Answer!</CorrectAnswer></button>
-</ch>
-</div></div></div>
-
-
-<div class="swiper-slide"><div class="slide q30"><button class="corner-page-number">30</button>
-<div class="image-wrapper">
-<img src="https://cdn.statically.io/gh/gkcube/animal@1/iguana-1.jpg" /></div>
-<wm><button class="mood">-1<br /><i class="m-i">mood_bad</i></button></wm>
-<cm><button class="mood">+4<br /><i class="m-i">mood</i></button></cm>
-<button class="touch-option"><touchoption>Touch The Correct Option !</touchoption></button>
-<div class='ops'>
-<ww><button class="opt c1"><Iguana>Iguana</Iguana></button></ww>
-<ww><button class="opt b1"><Chameleon>Chameleon</Chameleon></button></ww>
-<ww><button class="opt b2"><Lizard>Lizard</Lizard></button></ww>
-<ww><button class="opt b3"><Gecko>Gecko</Gecko></button></ww>
-<ch hidden>
-<button class="opt cbt1"><Iguana>Iguana</Iguana></button>
-<button class="opt cbt2"><CorrectAnswer>Correct Answer!</CorrectAnswer></button>
-</ch>
-</div></div></div>
-
-
-<div class="swiper-slide"><div class="slide q31"><button class="corner-page-number">31</button>
-<div class="image-wrapper">
-<img src="https://cdn.statically.io/gh/gkcube/animal@1/shark-1.jpg" /></div>
-<wm><button class="mood">-1<br /><i class="m-i">mood_bad</i></button></wm>
-<cm><button class="mood">+4<br /><i class="m-i">mood</i></button></cm>
-<button class="touch-option"><touchoption>Touch The Correct Option !</touchoption></button>
-<div class='ops'>
-<ww><button class="opt b1"><Dolphin>Dolphin</Dolphin></button></ww>
-<ww><button class="opt b2"><Crocodile>Crocodile</Crocodile></button></ww>
-<ww><button class="opt c1"><Shark>Shark</Shark></button></ww>
-<ww><button class="opt b3"><Whale>Whale</Whale></button></ww>
-<ch hidden>
-<button class="opt cbt1"><Shark>Shark</Shark></button>
-<button class="opt cbt2"><CorrectAnswer>Correct Answer!</CorrectAnswer></button>
-</ch>
-</div></div></div>
-
-
-
-<div class="swiper-slide"><div class="slide q32"><button class="corner-page-number">32</button>
-<div class="image-wrapper">
-<img src="https://cdn.statically.io/gh/gkcube/animal@1/wolf-1.jpg" /></div>
-<wm><button class="mood">-1<br /><i class="m-i">mood_bad</i></button></wm>
-<cm><button class="mood">+4<br /><i class="m-i">mood</i></button></cm>
-<button class="touch-option"><touchoption>Touch The Correct Option !</touchoption></button>
-<div class='ops'>
-<ww><button class="opt b1"><Jackal>Jackal</Jackal></button></ww>
-<ww><button class="opt b2"><Hyena>Hyena</Hyena></button></ww>
-<ww><button class="opt b3"><Lemur>Lemur</Lemur></button></ww>
-<ww><button class="opt c1"><Wolf>Wolf</Wolf></button></ww>
-<ch hidden>
-<button class="opt cbt1"><Wolf>Wolf</Wolf></button>
-<button class="opt cbt2"><CorrectAnswer>Correct Answer!</CorrectAnswer></button>
-</ch>
-</div></div></div>
-
-
-<div class="swiper-slide"><div class="slide q33"><button class="corner-page-number">33</button>
-<div class="image-wrapper">
-<img src="https://cdn.statically.io/gh/gkcube/animal@1/anteater-1.jpg" /></div>
-<wm><button class="mood">-1<br /><i class="m-i">mood_bad</i></button></wm>
-<cm><button class="mood">+4<br /><i class="m-i">mood</i></button></cm>
-<button class="touch-option"><touchoption>Touch The Correct Option !</touchoption></button>
-<div class='ops'>
-<ww><button class="opt c1"><Anteater>Anteater</Anteater></button></ww>
-<ww><button class="opt b1"><Pangolin>Pangolin</Pangolin></button></ww>
-<ww><button class="opt b2"><Mongoose>Mongoose</Mongoose></button></ww>
-<ww><button class="opt b3"><Mole>Mole</Mole></button></ww>
-<ch hidden>
-<button class="opt cbt1"><Anteater>Anteater</Anteater></button>
-<button class="opt cbt2"><CorrectAnswer>Correct Answer!</CorrectAnswer></button>
-</ch>
-</div></div></div>
-
-
-<div class="swiper-slide"><div class="slide q34"><button class="corner-page-number">34</button>
-<div class="image-wrapper">
-<img src="https://cdn.statically.io/gh/gkcube/animal@1/barasingha-1.jpg" /></div>
-<wm><button class="mood">-1<br /><i class="m-i">mood_bad</i></button></wm>
-<cm><button class="mood">+4<br /><i class="m-i">mood</i></button></cm>
-<button class="touch-option"><touchoption>Touch The Correct Option !</touchoption></button>
-<div class='ops'>
-<ww><button class="opt b1"><Deer>Deer</Deer></button></ww>
-<ww><button class="opt b2"><Donkey>Donkey</Donkey></button></ww>
-<ww><button class="opt c1"><Barasingha>Barasingha</Barasingha></button></ww>
-<ww><button class="opt b3"><Bison>Bison</Bison></button></ww>
-<ch hidden>
-<button class="opt cbt1"><Barasingha>Barasingha</Barasingha></button>
-<button class="opt cbt2"><CorrectAnswer>Correct Answer!</CorrectAnswer></button>
-</ch>
-</div></div></div>
-
-
-<div class="swiper-slide"><div class="slide q35"><button class="corner-page-number">35</button>
-<div class="image-wrapper">
-<img src="https://cdn.statically.io/gh/gkcube/animal@1/donkey-1.jpg" /></div>
-<wm><button class="mood">-1<br /><i class="m-i">mood_bad</i></button></wm>
-<cm><button class="mood">+4<br /><i class="m-i">mood</i></button></cm>
-<button class="touch-option"><touchoption>Touch The Correct Option !</touchoption></button>
-<div class='ops'>
-<ww><button class="opt b1"><Horse>Horse</Horse></button></ww>
-<ww><button class="opt b2"><Cow>Cow</Cow></button></ww>
-<ww><button class="opt b3"><Deer>Deer</Deer></button></ww>
-<ww><button class="opt c1"><Donkey>Donkey</Donkey></button></ww>
-<ch hidden>
-<button class="opt cbt1"><Donkey>Donkey</Donkey></button>
-<button class="opt cbt2"><CorrectAnswer>Correct Answer!</CorrectAnswer></button>
-</ch>
-</div></div></div>
-
-
-<div class="swiper-slide"><div class="slide q36"><button class="corner-page-number">36</button>
-<div class="image-wrapper">
-<img src="https://cdn.statically.io/gh/gkcube/animal@1/hyena-1.jpg" /></div>
-<wm><button class="mood">-1<br /><i class="m-i">mood_bad</i></button></wm>
-<cm><button class="mood">+4<br /><i class="m-i">mood</i></button></cm>
-<button class="touch-option"><touchoption>Touch The Correct Option !</touchoption></button>
-<div class='ops'>
-<ww><button class="opt c1"><Hyena>Hyena</Hyena></button></ww>
-<ww><button class="opt b1"><Dog>Dog</Dog></button></ww>
-<ww><button class="opt b2"><Wolf>Wolf</Wolf></button></ww>
-<ww><button class="opt b3"><Jackal>Jackal</Jackal></button></ww>
-<ch hidden>
-<button class="opt cbt1"><Hyena>Hyena</Hyena></button>
-<button class="opt cbt2"><CorrectAnswer>Correct Answer!</CorrectAnswer></button>
-</ch>
-</div></div></div>
-
-
-<div class="swiper-slide"><div class="slide q37"><button class="corner-page-number">37</button>
-<div class="image-wrapper">
-<img src="https://cdn.statically.io/gh/gkcube/animal@1/dolphin-1.jpg" /></div>
-<wm><button class="mood">-1<br /><i class="m-i">mood_bad</i></button></wm>
-<cm><button class="mood">+4<br /><i class="m-i">mood</i></button></cm>
-<button class="touch-option"><touchoption>Touch The Correct Option !</touchoption></button>
-<div class='ops'>
-<ww><button class="opt b1"><Whale>Whale</Whale></button></ww>
-<ww><button class="opt b2"><Shark>Shark</Shark></button></ww>
-<ww><button class="opt c1"><Dolphin>Dolphin</Dolphin></button></ww>
-<ww><button class="opt b3"><Crocodile>Crocodile</Crocodile></button></ww>
-<ch hidden>
-<button class="opt cbt1"><Dolphin>Dolphin</Dolphin></button>
-<button class="opt cbt2"><CorrectAnswer>Correct Answer!</CorrectAnswer></button>
-</ch>
-</div></div></div>
-
-
-<div class="swiper-slide"><div class="slide q38"><button class="corner-page-number">38</button>
-<div class="image-wrapper">
-<img src="https://cdn.statically.io/gh/gkcube/animal@1/chimpanzee-1.jpg" /></div>
-<wm><button class="mood">-1<br /><i class="m-i">mood_bad</i></button></wm>
-<cm><button class="mood">+4<br /><i class="m-i">mood</i></button></cm>
-<button class="touch-option"><touchoption>Touch The Correct Option !</touchoption></button>
-<div class='ops'>
-<ww><button class="opt b1"><Bear>Bear</Bear></button></ww>
-<ww><button class="opt c1"><Chimpanzee>Chimpanzee</Chimpanzee></button></ww>
-<ww><button class="opt b2"><Monkey>Monkey</Monkey></button></ww>
-<ww><button class="opt b3"><Baboon>Baboon</Baboon></button></ww>
-<ch hidden>
-<button class="opt cbt1"><Chimpanzee>Chimpanzee</Chimpanzee></button>
-<button class="opt cbt2"><CorrectAnswer>Correct Answer!</CorrectAnswer></button>
-</ch>
-</div></div></div>
-
-
-<div class="swiper-slide"><div class="slide q39"><button class="corner-page-number">39</button>
-<div class="image-wrapper">
-<img src="https://cdn.statically.io/gh/gkcube/animal@1/fox-1.jpg" /></div>
-<wm><button class="mood">-1<br /><i class="m-i">mood_bad</i></button></wm>
-<cm><button class="mood">+4<br /><i class="m-i">mood</i></button></cm>
-<button class="touch-option"><touchoption>Touch The Correct Option !</touchoption></button>
-<div class='ops'>
-<ww><button class="opt b1"><Dog>Dog</Dog></button></ww>
-<ww><button class="opt b2"><Hyena>Hyena</Hyena></button></ww>
-<ww><button class="opt b3"><Wolf>Wolf</Wolf></button></ww>
-<ww><button class="opt c1"><Fox>Fox</Fox></button></ww>
-<ch hidden>
-<button class="opt cbt1"><Fox>Fox</Fox></button>
-<button class="opt cbt2"><CorrectAnswer>Correct Answer!</CorrectAnswer></button>
-</ch>
-</div></div></div>
-
-
-<div class="swiper-slide"><div class="slide q40"><button class="corner-page-number">40</button>
-<div class="image-wrapper">
-<img src="https://cdn.statically.io/gh/gkcube/animal@1/snail-1.jpg" /></div>
-<wm><button class="mood">-1<br /><i class="m-i">mood_bad</i></button></wm>
-<cm><button class="mood">+4<br /><i class="m-i">mood</i></button></cm>
-<button class="touch-option"><touchoption>Touch The Correct Option !</touchoption></button>
-<div class='ops'>
-<ww><button class="opt b1"><Tortoise>Tortoise</Tortoise></button></ww>
-<ww><button class="opt c1"><Snail>Snail</Snail></button></ww>
-<ww><button class="opt b2"><Pangolin>Pangolin</Pangolin></button></ww>
-<ww><button class="opt b3"><Anteater>Anteater</Anteater></button></ww>
-<ch hidden>
-<button class="opt cbt1"><Snail>Snail</Snail></button>
-<button class="opt cbt2"><CorrectAnswer>Correct Answer!</CorrectAnswer></button>
-</ch>
-</div></div></div>
-
-
-<div class="swiper-slide"><div class="slide q41"><button class="corner-page-number">41</button>
-<div class="image-wrapper">
-<img src="https://cdn.statically.io/gh/gkcube/animal@1/panda-1.jpg" /></div>
-<wm><button class="mood">-1<br /><i class="m-i">mood_bad</i></button></wm>
-<cm><button class="mood">+4<br /><i class="m-i">mood</i></button></cm>
-<button class="touch-option"><touchoption>Touch The Correct Option !</touchoption></button>
-<div class='ops'>
-<ww><button class="opt c1"><Panda>Panda</Panda></button></ww>
-<ww><button class="opt b1"><Lemur>Lemur</Lemur></button></ww>
-<ww><button class="opt b2"><Otter>Otter</Otter></button></ww>
-<ww><button class="opt b3"><Bear>Bear</Bear></button></ww>
-<ch hidden>
-<button class="opt cbt1"><Panda>Panda</Panda></button>
-<button class="opt cbt2"><CorrectAnswer>Correct Answer!</CorrectAnswer></button>
-</ch>
-</div></div></div>
-
-
-<div class="swiper-slide"><div class="slide q42"><button class="corner-page-number">42</button>
-<div class="image-wrapper">
-<img src="https://cdn.statically.io/gh/gkcube/animal@1/otter-1.jpg" /></div>
-<wm><button class="mood">-1<br /><i class="m-i">mood_bad</i></button></wm>
-<cm><button class="mood">+4<br /><i class="m-i">mood</i></button></cm>
-<button class="touch-option"><touchoption>Touch The Correct Option !</touchoption></button>
-<div class='ops'>
-<ww><button class="opt b1"><Squirrel>Squirrel</Squirrel></button></ww>
-<ww><button class="opt b2"><Rabbit>Rabbit</Rabbit></button></ww>
-<ww><button class="opt c1"><Otter>Otter</Otter></button></ww>
-<ww><button class="opt b3"><Badger>Badger</Badger></button></ww>
-<ch hidden>
-<button class="opt cbt1"><Otter>Otter</Otter></button>
-<button class="opt cbt2"><CorrectAnswer>Correct Answer!</CorrectAnswer></button>
-</ch>
-</div></div></div>
-
-
-<div class="swiper-slide"><div class="slide q43"><button class="corner-page-number">43</button>
-<div class="image-wrapper">
-<img src="https://cdn.statically.io/gh/gkcube/animal@1/rhinoceros-1.jpg" /></div>
-<wm><button class="mood">-1<br /><i class="m-i">mood_bad</i></button></wm>
-<cm><button class="mood">+4<br /><i class="m-i">mood</i></button></cm>
-<button class="touch-option"><touchoption>Touch The Correct Option !</touchoption></button>
-<div class='ops'>
-<ww><button class="opt c1"><Rhinoceros>Rhinoceros</Rhinoceros></button></ww>
-<ww><button class="opt b1"><Hippopotamus>Hippopotamus</Hippopotamus></button></ww>
-<ww><button class="opt b2"><Bison>Bison</Bison></button></ww>
-<ww><button class="opt b3"><Elephant>Elephant</Elephant></button></ww>
-<ch hidden>
-<button class="opt cbt1"><Rhinoceros>Rhinoceros</Rhinoceros></button>
-<button class="opt cbt2"><CorrectAnswer>Correct Answer!</CorrectAnswer></button>
-</ch>
-</div></div></div>
-
-
-<div class="swiper-slide"><div class="slide q44"><button class="corner-page-number">44</button>
-<div class="image-wrapper">
-<img src="https://cdn.statically.io/gh/gkcube/animal@1/rabbit.jpg" /></div>
-<wm><button class="mood">-1<br /><i class="m-i">mood_bad</i></button></wm>
-<cm><button class="mood">+4<br /><i class="m-i">mood</i></button></cm>
-<button class="touch-option"><touchoption>Touch The Correct Option !</touchoption></button>
-<div class='ops'>
-<ww><button class="opt b1"><Badger>Badger</Badger></button></ww>
-<ww><button class="opt b2"><Mole>Mole</Mole></button></ww>
-<ww><button class="opt c1"><Rabbit>Rabbit</Rabbit></button></ww>
-<ww><button class="opt b3"><Mongoose>Mongoose</Mongoose></button></ww>
-<ch hidden>
-<button class="opt cbt1"><Rabbit>Rabbit</Rabbit></button>
-<button class="opt cbt2"><CorrectAnswer>Correct Answer!</CorrectAnswer></button>
-</ch>
-
-</div></div></div>
-
-
-<div class="swiper-slide"><div class="slide q45"><button class="corner-page-number">45</button>
-<div class="image-wrapper">
-<img src="https://cdn.statically.io/gh/gkcube/animal@1/mole-1.jpg" /></div>
-<wm><button class="mood">-1<br /><i class="m-i">mood_bad</i></button></wm>
-<cm><button class="mood">+4<br /><i class="m-i">mood</i></button></cm>
-<button class="touch-option"><touchoption>Touch The Correct Option !</touchoption></button>
-<div class='ops'>
-<ww><button class="opt b1"><Rat>Rat</Rat></button></ww>
-<ww><button class="opt b2"><Lizard>Lizard</Lizard></button></ww>
-<ww><button class="opt b3"><Chameleon>Chameleon</Chameleon></button></ww>
-<ww><button class="opt c1"><Mole>Mole</Mole></button></ww>
-<ch hidden>
-<button class="opt cbt1"><Mole>Mole</Mole></button>
-<button class="opt cbt2"><CorrectAnswer>Correct Answer!</CorrectAnswer></button>
-</ch>
-</div></div></div>
-
-
-<div class="swiper-slide">
-<div class="slide q46"><button class="corner-page-number">46</button>
-<div class="image-wrapper">
-<img src="https://cdn.statically.io/gh/gkcube/animal@1/Pangolin-1.jpg" /></div>
-<wm><button class="mood">-1<br /><i class="m-i">mood_bad</i></button></wm>
-<cm><button class="mood">+4<br /><i class="m-i">mood</i></button></cm>
-<button class="touch-option"><touchoption>Touch The Correct Option !</touchoption></button>
-<div class='ops'>
-<ww><button class="opt b1"><Tortoise>Tortoise</Tortoise></button></ww>
-<ww><button class="opt c1"><Pangolin>Pangolin</Pangolin></button></ww>
-<ww><button class="opt b2"><Iguana>Iguana</Iguana></button></ww>
-<ww><button class="opt b3"><Rat>Rat</Rat></button></ww>
-<ch hidden>
-<button class="opt cbt1"><Pangolin>Pangolin</Pangolin></button>
-<button class="opt cbt2"><CorrectAnswer>Correct Answer!</CorrectAnswer></button>
-</ch>
-</div></div></div>
-
-
-<div class="swiper-slide">
-<div class="slide q47"><button class="corner-page-number">47</button>
-<div class="image-wrapper">
-<img src="https://cdn.statically.io/gh/gkcube/animal@1/goat-1.jpg" /></div>
-<wm><button class="mood">-1<br /><i class="m-i">mood_bad</i></button></wm>
-<cm><button class="mood">+4<br /><i class="m-i">mood</i></button></cm>
-<button class="touch-option"><touchoption>Touch The Correct Option !</touchoption></button>
-<div class='ops'>
-<ww><button class="opt c1"><Goat>Goat</Goat></button></ww>
-<ww><button class="opt b1"><Sheep>Sheep</Sheep></button></ww>
-<ww><button class="opt b2"><Alpaca>Alpaca</Alpaca></button></ww>
-<ww><button class="opt b3"><Deer>Deer</Deer></button></ww>
-<ch hidden>
-<button class="opt cbt1"><Goat>Goat</Goat></button>
-<button class="opt cbt2"><CorrectAnswer>Correct Answer!</CorrectAnswer></button>
-</ch>
-</div></div></div>
-
-
-<div class="swiper-slide">
-<div class="slide q48"><button class="corner-page-number">48</button>
-<div class="image-wrapper">
-<img src="https://cdn.statically.io/gh/gkcube/animal@1/beaver-1.jpg" /></div>
-<wm><button class="mood">-1<br /><i class="m-i">mood_bad</i></button></wm>
-<cm><button class="mood">+4<br /><i class="m-i">mood</i></button></cm>
-<button class="touch-option"><touchoption>Touch The Correct Option !</touchoption></button>
-<div class='ops'>
-<ww><button class="opt b1"><Rabbit>Rabbit</Rabbit></button></ww>
-<ww><button class="opt b2"><Rat>Rat</Rat></button></ww>
-<ww><button class="opt c1"><Beaver>Beaver</Beaver></button></ww>
-<ww><button class="opt b3"><Squirrel>Squirrel</Squirrel></button></ww>
-<ch hidden>
-<button class="opt cbt1"><Beaver>Beaver</Beaver></button>
-<button class="opt cbt2"><CorrectAnswer>Correct Answer!</CorrectAnswer></button>
-</ch>
-</div></div></div>
-
-
-<div class="swiper-slide">
-<div class="slide q49"><button class="corner-page-number">49</button>
-<div class="image-wrapper">
-<img src="https://cdn.statically.io/gh/gkcube/animal@1/baboon-1.jpg" /></div>
-<wm><button class="mood">-1<br /><i class="m-i">mood_bad</i></button></wm>
-<cm><button class="mood">+4<br /><i class="m-i">mood</i></button></cm>
-<button class="touch-option"><touchoption>Touch The Correct Option !</touchoption></button>
-<div class='ops'>
-<ww><button class="opt b1"><Chimpanzee>Chimpanzee</Chimpanzee></button></ww>
-<ww><button class="opt b2"><Monkey>Monkey</Monkey></button></ww>
-<ww><button class="opt b3"><Langur>Langur</Langur></button></ww>
-<ww><button class="opt c1"><Baboon>Baboon</Baboon></button></ww>
-<ch hidden>
-<button class="opt cbt1"><Baboon>Baboon</Baboon></button>
-<button class="opt cbt2"><CorrectAnswer>Correct Answer!</CorrectAnswer></button>
-</ch>
-</div></div></div>
-
-
-<div class="swiper-slide">
-<div class="slide q50"><button class="corner-page-number">50</button>
-<div class="image-wrapper">
-<img src="https://cdn.statically.io/gh/gkcube/animal@1/deer-1.jpg" /></div>
-<wm><button class="mood">-1<br /><i class="m-i">mood_bad</i></button></wm>
-<cm><button class="mood">+4<br /><i class="m-i">mood</i></button></cm>
-<button class="touch-option"><touchoption>Touch The Correct Option !</touchoption></button>
-<div class='ops'>
-<ww><button class="opt c1"><Deer>Deer</Deer></button></ww>
-<ww><button class="opt b1"><Goat>Goat</Goat></button></ww>
-<ww><button class="opt b" onclick="wb()149;Audio2();"><Barasingha>Barasingha</Barasingha></button></ww>
-<ww><button class="opt b3"><Sheep>Sheep</Sheep></button></ww>
-<ch hidden>
-<button class="opt cbt1"><Deer>Deer</Deer></button>
-<button class="opt cbt2"><CorrectAnswer>Correct Answer!</CorrectAnswer></button>
-</ch>
-</div></div></div>
-
-
-<div class="swiper-slide">
-<div class="slide q51"><button class="corner-page-number">51</button>
-<div class="image-wrapper">
-<img src="https://cdn.statically.io/gh/gkcube/animal@1/cow-1.jpg" /></div>
-<wm><button class="mood">-1<br /><i class="m-i">mood_bad</i></button></wm>
-<cm><button class="mood">+4<br /><i class="m-i">mood</i></button></cm>
-<button class="touch-option"><touchoption>Touch The Correct Option !</touchoption></button>
-<div class='ops'>
-<ww><button class="opt b1"><Buffalo>Buffalo</Buffalo></button></ww>
-<ww><button class="opt b2"><Donkey>Donkey</Donkey></button></ww>
-<ww><button class="opt b3"><Rhinoceros>Rhinoceros</Rhinoceros></button></ww>
-<ww><button class="opt c1"><Cow>Cow</Cow></button></ww>
-<ch hidden>
-<button class="opt cbt1"><Cow>Cow</Cow></button>
-<button class="opt cbt2"><CorrectAnswer>Correct Answer!</CorrectAnswer></button>
-</ch>
-</div></div></div>
-
-
-<div class="swiper-slide">
-<div class="slide q52"><button class="corner-page-number">52</button>
-<div class="image-wrapper">
-<img src="https://cdn.statically.io/gh/gkcube/animal@1/rat-1.jpg" /></div>
-<wm><button class="mood">-1<br /><i class="m-i">mood_bad</i></button></wm>
-<cm><button class="mood">+4<br /><i class="m-i">mood</i></button></cm>
-<button class="touch-option"><touchoption>Touch The Correct Option !</touchoption></button>
-<div class='ops'>
-<ww><button class="opt b1"><Rabbit>Rabbit</Rabbit></button></ww>
-<ww><button class="opt c1"><Rat>Rat</Rat></button></ww>
-<ww><button class="opt b2"><Beaver>Beaver</Beaver></button></ww>
-<ww><button class="opt b3"><Squirrel>Squirrel</Squirrel></button></ww>
-<ch hidden>
-<button class="opt cbt1"><Rat>Rat</Rat></button>
-<button class="opt cbt2"><CorrectAnswer>Correct Answer!</CorrectAnswer></button>
-</ch>
-</div></div></div>
 
 </div></div>
 
+<result><div class='sugg'>
+<i class='m-i'>&#xe937</i> সঠিক উত্তরগুলি অবশ্যই দেখে নেবেন।
+<br/>
+<i class='m-i'>&#xe937</i> সব উত্তর সঠিক না হওয়া পর্যন্ত মকটেস্ট আবার দিন।
+<br/>
+<i class='m-i'>&#xe937</i> মকটেস্ট আবার দিতে হলে রিসেট করে নেবেন।
+</div></result>
+
+<next-previous>
+<button class="n-p n-l">PREVIOUS<br/>QUESTION</button>
+  <mock><button class="timing"><ben>সময় বাকি আছে</ben><br/><time>--:--</time></button></mock>
+  <result><button class="timing" onclick='showscore();'><i class='m-i'>&#xf20c</i> SCORE</button></result>
+<button class="n-p n-r">NEXT<br/>QUESTION</button>
+ </next-previous>
+
+<next-previous>
+<button class="dashboard" onclick="showdashboard();">
+<i class="m-i">&#xe8f0</i>DASHBOARD
+</button>
+<button class="resetb submit" onclick="showsub()"><i class="m-i">&#xea50</i>FINAL SUBMIT</button>
+<result><button class="resetb reset" onclick="showreset()"><i class="m-i">&#xe2e7</i>RESET</button></result>
+</next-previous>
 
 
-<script src="https://cdn.jsdelivr.net/npm/swiper@6.7.1/swiper-bundle.min.js"></script>
+<!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@8.0.3/swiper-bundle.min.js"></script>
+
+  <!-- Initialize Swiper -->
 
 <script>
-var swiper = new Swiper('.swiper-container',{loop: true, loopPreventsSlide: false,
-preloadImages: true, lazy: true,
-navigation: {nextEl: '.next-right',prevEl: '.next-left',},       });
-
-swiper.on('transitionEnd', function() {$(".next-right").removeClass("mynext");
-
-localStorage.setItem('ns1', swiper.activeIndex);  });
-var ns1 = localStorage.getItem('ns1');
-
-function gotoslide() {if (localStorage.getItem("ns1") === null) {
-swiper.slideTo(1,0,true); }else {swiper.slideTo(ns1,0,true);}  }
-    
-    gotoslide();
-   
-
+var sw = new Swiper('.swiper',{loop: true, loopPreventsSlide: false,
+navigation: {nextEl: '.n-r',prevEl: '.n-l',}, });
+sw.on('transitionEnd', function() { $(".n-p").removeClass("mnext");
+l.setItem(q+'qns', sw.activeIndex); autovisit();});
+function gotoslide() {if (l.getItem(q+'qns')==null) {
+sw.slideTo(1,0,true); }else {sw.slideTo(l.getItem(q+'qns'),0,true);}  }
+$('qb').click(function(){var i = $('qb').index(this); sw.slideTo(i,500,true); hback();});
+$('o1,o2,o3,o0').click(function(){$(".n-r").addClass("mnext");});
+gotoslide();
 </script>
 
 
+<div id="belowpopup" class="toggle" onclick="hback()";></div>
+<div id="belowend"></div>
+<div id="below"></div>
+
+<dbox>
+<div class="startpopup dbox">
+  <dhead>uuu</dhead>
+<button class="details">প্রশ্ন সংখ্যা<br/><aq>15</aq></button>
+<button class="details">সময় পাবেন<br/>5 মিনিট</button>
+<button class="details correct">প্রতি সঠিক উত্তরে<br/>+1</button>
+<button class="details wrong">প্রতি ভুল উত্তরে<br/>-0.25</button>
+<hr/>
+<div align="center">
+BEST OF LUCK!
+<hr/>
+<button class="details confirm" onclick="location.replace('/2022/01/wbcs-mock-test-indian-history.html?m=1')"><i class="m-i">&#xeaa7</i>BACK</button>
+<button class="details confirm" onclick="start();autovisit();"><i class="m-i">&#xe1c4</i>START</button>
+</div></div>
+</dbox>
 
 
-
-<quizbtn>
-<div class="scorebg">
-<button id="score1"><score>Score</score> : </button><button id="sbox">0</button>
-<button class="sreset" onclick="showreset()"><reset>Reset</reset></button>
+<submitbox>
+<div class="toggle dashboardpop dbox">
+<div align="center">
+  <dhead></dhead>
+<button class="details">মোট প্রশ্ন সংখ্যা<br/><aq>15</aq></button>
+<mock><button class="details yv">প্রশ্ন দেখেছেন<br/><yv>1</yv></button></mock>
+<button class="details ya">উত্তর দিয়েছেন<br/><ya>0</ya></button>
+<mock><button class="details ym">মার্ক করেছেন<br/><ym/><ym>0</ya></button></mock>
+<result><button class="details correct">সঠিক উত্তর<br/><ca>0</ca></button>
+<button class="details wrong">ভুল উত্তর<br/><wa>0</wa></button></result>
 </div>
-<button class="resetb" onclick="location.replace('shareme://');"><share>Share</share></button>
-</quizbtn>
-<next-previous-buttons>
-<button class="next-previous next-left"><i class="m-i">&#xe5cb</i></button>
-<button class="goshowleft change" onclick="mylanguage();"><cl></cl></button>
-<button class="next-previous next-right"><i class="m-i">&#xe5cc</i></button>
-</next-previous-buttons>
+<hr/>
+<qb style="display:none">0</qb>
+<qb>1</qb><qb>2</qb><qb>3</qb><qb>4</qb><qb>5</qb>
+<qb>6</qb><qb>7</qb><qb>8</qb><qb>9</qb><qb>10</qb>
+<qb>11</qb><qb>12</qb><qb>13</qb><qb>14</qb><qb>15</qb>
+  
+<button class="details confirm" style='margin-top:8px' onclick="hback()"><i class="m-i">&#xe5c9</i>CLOSE</button>
+<button class="details confirm result" style='margin-top:11px' onclick="$('.dashboardpop').hide();showscore()"><i class="m-i">&#xe801</i>SCORE</button>
+</div>
+</submitbox>
+
+<submitbox>
+<div class="toggle submitpopup dbox">
+<dhead></dhead>
+<button class="details">মোট প্রশ্ন সংখ্যা<br/><aq>15</aq></button>
+  <button class="details yv">প্রশ্ন দেখেছেন<br/><yv>1</yv></button>
+<button class="details ya">উত্তর দিয়েছেন<br/><ya>0</ya></button>
+<button class="details">সময় বাকী আছে<br/><time>05:00</time></button>
+
+<hr/><div align="center">
+<ben>আপনি কি ফাইনাল সাবমিট করতে চান?</ben>
+<hr/>
+<button class="details confirm" onclick="hback()"><i class="m-i">&#xe5c9</i>CANCEL</button>
+<button class="details confirm" onclick="submit();"><i class="m-i">&#xe86c</i>SUBMIT</button>
+</div></div>
+</submitbox>
+
+<dbox>
+<div class="endpopup dbox">
+  <dhead></dhead>
+<button class="details">মোট প্রশ্ন সংখ্যা<br/><aq>15</aq></button>
+<button class="details ya">উত্তর দিয়েছেন<br/><ya>0</ya></button>
+<button class="details">উত্তর দেওয়া হয়নি<br/><na>15</na></button>
+<button class="details">সময় বাকী ছিল<br/><time>00:00</time></button>
+<hr/>
+<div align="center">
+<ben>মকটেস্ট সাবমিট হয়ে গেছে!</ben>
+<hr/>
+
+<button class="details confirm" onclick="result();hidepage();"><i class="m-i">&#xe801</i>রেজাল্ট দেখুন</button>
+</div></div>
+</dbox>
 
 
-<script>
- $(document).ready(function() {
- 
-   if(location.hash){window.history.back();}
-   $('.tooltitle').delay(500).slideDown('slow');
-   
-setTimeout(function() {if(sessionStorage.getItem('f1')){showpage();}sessionStorage.setItem('f1','t'); }, 300);
 
-}); 
-$(document).ready(function() { cont(); });
-window.onload = function() {showpage();};
-$('.loading').click(function(){hidepage();});
-</script>
-<link rel="prefetch" href="index-english.html" />
-<link rel="prefetch" href="1-animal.html" />
+<submitbox>
+<div class="toggle resetpopup dbox" hidden>
+<dhead></dhead>
+<div align="center"><ben>আপনি কি রিসেট করতে চান?
+<hr/>
+রিসেট করার পর এই রেজাল্ট ডিলিট হয়ে যাবে!<br/>
+  নতুন ভাবে মকটেস্টে অংশগ্রহণ করা যাবে।</ben>
+<hr/>
+<button class="details confirm" onclick="hback();hidepage();storagereset();"><i class="m-i">&#xe86c</i>RESET</button>
+<button class="details confirm" onclick="hback();"><i class="m-i">&#xe5c9</i>CANCEL</button>
 
 
-</body>
-</html>
+</div></div>
+</submitbox>
+
+
+<submitbox>
+<div class="toggle scorepopup dbox" hidden>
+<dhead></dhead>
+<button class="details" style="width:calc(100% - 13.33px)">মোট প্রশ্ন ছিল<br/><aq>15</aq></button>
+<button class="details ya">উত্তর দিয়েছেন<br/><ya>0</ya></button>
+<button class="details">উত্তর দেননি<br/><na>15</na></button>
+<button class="details" style="width:calc(100% - 13.33px)">মোট সময় ছিল<br/>5 মিনিট</button>
+<button class="details">সময় লেগেছে<br/><time>0</time></button>
+<button class="details">সময় বাকী ছিল<br/><rtime>0</rtime></button>
+<button class="details correct">সঠিক উত্তর<br/><ca>0</ca></button>
+<button class="details wrong">ভুল উত্তর<br/><wa>0</wa></button>
+<button class="details score" style='width:calc(100% - 13.33px)'>আপনার স্কোর<br/><ys>0</ys></button>
+
+<button class="details confirm" onclick="hback()"><i class="m-i">&#xe5c9</i>CLOSE</button>
+<button class="details confirm" onclick="$('.scorepopup').hide();showdashboard()"><i class="m-i">&#xe8f0</i>DASHBOARD</button>
+</div>
+</submitbox>
+
+
+<dbox>
+<div class="autopopup dbox">
+<div align="center">
+  <dhead></dhead>
+এই মকটেস্ট অন্য উইন্ডো তে চলছে
+<hr/>
+এখানে চালু করতে রিলোড করুন
+<hr/>
+<button class="details confirm" onclick="location.reload();">RELOAD PAGE</button>
+</div></div>
+</dbox>
+
+<div id='wbcs-history-list'></div>
